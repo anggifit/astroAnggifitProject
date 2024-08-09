@@ -1,4 +1,7 @@
 ---
+import Navigation from '../components/Navigation.astro'
+import Footer from '../components/Footer.astro'
+
 const pageTitle = "Inicio";
 const customButton = "Reserva ahora"
 
@@ -13,12 +16,11 @@ const customButton = "Reserva ahora"
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<a href="/">Inicio</a>
-        <a href="/about/">Sobre mi</a>
-        <a href="/nutrirecetas/">Recetas</a>
+		<Navigation/>
 
-		<h1>Equilibrio y bienestar a tu alcance.</h1>
+		<h1 class="text-cyan-500" >Equilibrio y bienestar a tu alcance.</h1>
 		<p>Descubre el camino hacia una vida equilibrada y llena de bienestar.</p>
-		<button>{customButton}</button>
+		<button class="bg-atlantis-400 p-4 m-4 rounded-full">{customButton}</button>
+		<Footer/>
 	</body>
 </html>
