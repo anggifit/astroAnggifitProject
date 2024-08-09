@@ -1,5 +1,5 @@
 ---
-
+const pageTitle = "Nutrirecetas";
 ---
 
 <html lang="en">
@@ -8,13 +8,18 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<a href="/">Inicio</a>
         <a href="/about/">Sobre mi</a>
-        <a href="/nutrirecetas/">Recetas</a>
+        <a href="/nutrirecetas/">Nutrirecetas</a>
 		
 		<h1>Recetas AnggiFit</h1>
+		<ul>
+			<li><a href="/nutrirecetas/recipe-1/">Tostadas de queso y tomate</a></li>
+			<li><a href="/nutrirecetas/recipe-2/">Torticas de arroz</a></li>
+			<li><a href="/nutrirecetas/recipe-3/">Arepa de avena, zapallo o auyama y espinaca</a></li>
+		</ul>
 	</body>
 </html>

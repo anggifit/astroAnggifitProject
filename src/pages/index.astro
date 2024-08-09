@@ -1,4 +1,6 @@
 ---
+const pageTitle = "Inicio";
+const customButton = "Reserva ahora"
 
 ---
 
@@ -8,7 +10,7 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<a href="/">Inicio</a>
@@ -17,5 +19,6 @@
 
 		<h1>Equilibrio y bienestar a tu alcance.</h1>
 		<p>Descubre el camino hacia una vida equilibrada y llena de bienestar.</p>
+		<button>{customButton}</button>
 	</body>
 </html>
