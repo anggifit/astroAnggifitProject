@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout pageTitle={frontmatter.title}>
+  <body class="bg-gray-100">
+    <div class="container mx-auto p-6">
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-4">
+          {frontmatter.title}
+        </h1>
+        <div class="flex">
+          <img
+            class="max-w-sm h-96 mx-auto my-4 rounded-lg shadow-md"
+            src={frontmatter.image.url}
+            alt={frontmatter.image.alt}
+          />
+          <div class="block">
+            <h2 class="text-xl font-semibold mb-2">
+              Ingredientes
+            </h2>
+            <ul class="list-disc list-inside mb-4">
+              {
+                frontmatter.ingredients.map((ingredient) => (
+                  <li class="mb-2">{ingredient}</li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+
+        <h2 class="text-xl font-semibold mb-2">
+          ¿Cómo Prepararlo?
+        </h2>
+        <ol class="list-decimal list-inside mb-6">
+          {frontmatter.steps.map((step) => <li class="mb-2">{step}</li>)}
+        </ol>
+      </div>
+    </div>
+  </body>
+</BaseLayout>

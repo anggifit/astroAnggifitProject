@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import RecipeList from "../../components/RecipeList.astro";
+
+export async function getStaticPaths() {
+  const allRecipes = await Astro.glob("../nutrirecetas/*.md");
+  const uniqueTags = [
+    ...new Set(allRecipes.map(recipe => recipe.frontmatter.tags).flat()),
+  ];
+
+  return uniqueTags.map((tag) => {
+    const filteredRecipes = allRecipes.filter((recipe) =>
+      recipe.frontmatter.tags.includes(tag),
+    );
+    return {
+      params: { tag },
+      props: { recipes: filteredRecipes },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { recipes } = Astro.props;
+---
+
+<BaseLayout pageTitle={tag}>
+  <p>Recetas etiquetadas con {tag}</p>
+  <ul>
+    {
+      recipes.map((recipe) => (
+        <RecipeList url={recipe.url} title={recipe.frontmatter.title} />
+      ))
+    }
+  </ul>
+</BaseLayout>
