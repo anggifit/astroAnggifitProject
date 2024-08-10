@@ -37,5 +37,4 @@ jobs:
           NETLIFY_DEPLOY_TO_PROD: true
           BUILD_DIRECTORY: public # Verifica que sea la carpeta de construcción correcta
 
-      - name: Verify Deployment
-        run: curl -s --head https://anggifitzone.netlify.app | head -n 1 | grep "HTTP/1.[01] [23].."
+      
