@@ -1,0 +1,41 @@
+#El token vence el 9-09-24
+
+name: "Deploy to Netlify"
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    name: 'Deploy'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Cache Node.js modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18.x' 
+
+      - run: npm install
+
+      - run: npm run build
+
+      - uses: jsmrcaga/action-netlify-deploy@v2.0.0
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.MY_SITE_ID }}
+          NETLIFY_DEPLOY_TO_PROD: true
+          BUILD_DIRECTORY: public # Verifica que sea la carpeta de construcción correcta
+
+      - name: Verify Deployment
+        run: curl -s --head https://your-site-url.netlify.app | head -n 1 | grep "HTTP/1.[01] [23].."
