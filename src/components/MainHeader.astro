@@ -1,0 +1,30 @@
+---
+const { customButton } = Astro.props;
+---
+
+<main class="pt-20 md:pt-40 flex justify-center">
+  <div class="container mx-auto px-8 lg:flex justify-center">
+    <div class="text-center lg:text-left lg:w-1/2 pb-[10.375rem]">
+      <h1 class="leading-normal">Equilibrio y bienestar a tu alcance.</h1>
+      <p class="mt-6">
+        Descubre el camino hacia una vida equilibrada y llena de bienestar.
+      </p>
+      <p class="mt-8 md:mt-12">
+        <button
+          type="button"
+          class="py-2 w-44 h-12 bg-atlantis-400 hover:bg-atlantis-600 rounded-full"
+          style={{ color: "white" }}
+        >
+          {customButton}
+        </button>
+      </p>
+    </div>
+    <div className="text-center">
+      <img
+        alt="anggi home"
+        class="w-[33.75rem] h-[27.5rem] rounded-tr-[60px] rounded-bl-[60px] shadow-lg"
+        src="https://images.unsplash.com/photo-1647334355585-68254b6157a2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHdvbWFuJTIwd29ya2luZ3xlbnwwfDB8MHx8fDI%3D"
+      />
+    </div>
+  </div>
+</main>

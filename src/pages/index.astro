@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import MainHeader from "../components/MainHeader.astro"
 
 const pageTitle = "Inicio";
 const customButton = "Reserva ahora";
@@ -7,9 +8,5 @@ const customButton = "Reserva ahora";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <main>
-    <h1 class="text-cyan-500">Equilibrio y bienestar a tu alcance.</h1>
-    <p>Descubre el camino hacia una vida equilibrada y llena de bienestar.</p>
-    <button class="bg-atlantis-400 p-4 m-4 rounded-full">{customButton}</button>
-  </main>
+  <MainHeader customButton={customButton}/>
 </BaseLayout>
