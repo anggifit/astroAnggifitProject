@@ -1,0 +1,11 @@
+---
+import { Image } from "astro:assets";
+
+const {src, alt} = Astro.props;
+---
+
+<Image
+  src={src}
+  alt={alt}
+  class="w-[32.75rem] h-[26.5rem] rounded-tr-[60px] rounded-bl-[60px] shadow-lg relative z-10"
+/>

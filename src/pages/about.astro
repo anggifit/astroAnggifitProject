@@ -1,17 +1,37 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import CustomImage from "../components/CustomImage.astro"
+import poleUrbano from "../assets/anggi-pole-urbano.jpeg";
 
 const pageTitle = "Sobre mi";
 ---
 
 <BaseLayout>
-  <h1>{pageTitle}</h1>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
+  <h1 class="text-center p-20">{pageTitle}</h1>
+  <div class="flex flex-row justify-center mx-10">
+    <div class="w-[1537px] relative">
+      <!-- Contenedor con posición relativa -->
+      <div class="grid grid-cols-4 grid-rows-5 gap-4 p-2">
+        <div class="col-span-2 row-span-3 place-self-center relative">
+          <div
+            class="w-[151.02px] h-[141.1px] absolute -left-10 -bottom-10 bg-[#e7f7d0] z-0"
+          >
+          </div>
+          <!-- Cuadro verde detrás -->
+          <CustomImage src={poleUrbano} alt="Anggi haciendo pole urbano" />
+        </div>
+        <div class="col-span-2 row-span-3 col-start-3 self-center">
+          <p class="pr-2 mr-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </BaseLayout>
