@@ -1,18 +1,26 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import RecipeList from "../components/RecipeList.astro";
+import RecipeCard from "../components/RecipeCard.astro";
 
 const allRecipes = await Astro.glob("../pages/nutrirecetas/*.md");
 const pageTitle = "Nutrirecetas";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1>{pageTitle}</h1>
-  <ul class="list-disc pl-5 m-4">
+  <h1 class="text-center p-2">{pageTitle}</h1>
+
+  <div class="grid grid-cols-4 grid-rows-5 gap-6 mx-2">
     {
       allRecipes.map((recipe) => (
-        <RecipeList url={recipe.url} title={recipe.frontmatter.title} />
+        <RecipeCard
+          imageSrc={recipe.frontmatter.image.url}
+          title={recipe.frontmatter.title}
+          stars="5.0"
+          description={recipe.frontmatter.description}
+          url={recipe.url}
+        />
       ))
     }
-  </ul>
+  </div>
 </BaseLayout>

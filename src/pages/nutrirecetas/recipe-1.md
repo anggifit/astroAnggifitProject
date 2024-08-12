@@ -1,8 +1,9 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Tostadas de queso y tomate'
+description: 'Disfruta de estas crujientes tostadas perfectas para un desayuno rápido o un aperitivo saludable.'
 author: 'Angelyn Bonaldy'
-pubDate: 2024-08-12
+pubDate: 2024-08-12{}
 image:
   url: 'https://images.unsplash.com/photo-1670842587871-326b95acbc8c?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   alt: 'Tostadas de queso y tomate'
