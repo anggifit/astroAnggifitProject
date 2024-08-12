@@ -2,10 +2,11 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Arepa de avena, zapallo o auyama y espinaca"
 author: "Angelyn Bonaldy"
+pubDate: 2024-08-12
 image:
   url: "https://images.unsplash.com/photo-1670842587871-326b95acbc8c?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   alt: "Tostadas de queso y tomate"
-tags: ["health", "nutrition"]
+tags: ["breakfast", "venezuelan"]
 ingredients: [
   "1/2 auyama cocida, hecha puré.",
   "30 g de harina de maíz.",

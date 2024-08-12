@@ -38,5 +38,15 @@ const { frontmatter } = Astro.props;
         </ol>
       </div>
     </div>
+    
+    <div class="flex flex-wrap">
+      {
+        frontmatter.tags.map((tag) => (
+          <p class="m-1 py-2 px-4">
+            <a class="text-atlantis-700" href={`/tags/${tag}`}>{tag}</a>
+          </p>
+        ))
+      }
+    </div>
   </body>
 </BaseLayout>
