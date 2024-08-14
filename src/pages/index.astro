@@ -1,13 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import MainHeader from "../components/MainHeader.astro"
-import Greeting from "../components/Greeting.jsx"
-
+import MainHeader from "../components/Homepage/MainHeader.astro";
+import AboutMe from "../components/Homepage/AboutMe.astro";
+import Services from "../components/Homepage/Services.astro";
+import Testimonies from "../components/Homepage/Testimonies.astro";
+import Prices from "../components/Homepage/Prices.astro";
 const pageTitle = "Inicio";
 const customButton = "Reserva ahora";
-
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <MainHeader customButton={customButton}/>
+  <MainHeader customButton={customButton} />
+  <AboutMe sectionTitle="Sobre mi" />
+  <Services />
+  <Testimonies />
+  <Prices />
 </BaseLayout>

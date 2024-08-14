@@ -2,7 +2,7 @@
 const plugin = require("tailwindcss/plugin");
 
 export default {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
       fontFamily: {
@@ -32,10 +32,12 @@ export default {
         950: "#172a09",
       },
       tuatara: {
-        100:"#dfe2e6",
-        200: "#d1d1d1", 
+        100: "#dfe2e6",
+        200: "#d1d1d1",
         300: "#999999",
-      }
+      },
+      black: "#000000",
+      white: "#ffffff",
     },
   },
   plugins: [
@@ -64,5 +66,4 @@ export default {
       });
     }),
   ],
-}
-
+};

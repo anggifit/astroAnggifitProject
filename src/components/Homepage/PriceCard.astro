@@ -1,0 +1,34 @@
+---
+import CustomButton from "../CustomButton.astro"
+
+const customButton = "Empieza ya"
+/* const { src, alt, title } = Astro.props; */
+---
+
+<div
+  class="w-[21.875rem] mx-auto h-[34.375em] overflow-hidden bg-atlantis-100 rounded-lg shadow-md rounded-tr-[60px] rounded-bl-[60px]"
+>
+  <div class="p-4 flex flex-col items-center justify-center flex-grow">
+    <p class="text-[24px] font-semibold text-center">Plan 1</p>
+    <svg
+      width="187"
+      height="3"
+      viewBox="0 0 187 3"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="none"
+    >
+      <path d="M0 2L187 1" stroke="#3C3C3C"></path>
+    </svg>
+    <div class="text-left">
+      <p class="p-2">1 Mentoring class</p>
+      <p class="p-2">Books and video material</p>
+      <p class="p-2">Consultation</p>
+      <p class="p-2">1 free webinars</p>
+
+    </div>
+    <div>
+      <CustomButton customButton={customButton}/>
+    </div>
+  </div>
+</div>

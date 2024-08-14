@@ -1,0 +1,40 @@
+---
+import CustomImage from "../CustomImage.astro";
+import profilePic from "../../assets/profile-pic.jpeg";
+import CustomButton from "../CustomButton.astro";
+const { customButton } = Astro.props;
+---
+
+<section
+  class="flex justify-center bg-gradient-to-r from-atlantis-300 to-atlantis-100 h-[800px]"
+>
+  <div
+    class="container mx-auto px-8 flex flex-col lg:flex-row items-center justify-center h-full"
+  >
+    <div
+      class="text-center lg:w-1/2 lg:text-left flex flex-col items-start"
+    >
+      <h1 class="leading-normal">Equilibrio y bienestar a tu alcance.</h1>
+      <p class="mt-6">
+        ¿Quieres optimizar tu nutrición y rendimiento deportivo de la manera más
+        cómoda?
+      </p>
+      <p class="mt-6">
+        Desde cualquier lugar y sin necesidad de moverte, trabajaremos juntos en
+        un plan integral que incluya una dieta adaptada y rutinas de ejercicio
+        para maximizar tus resultados.
+      </p>
+      <p class="mt-6">
+        Todo el proceso es sencillo y accesible desde tu móvil, con un
+        seguimiento constante y ajustes según tu progreso.
+      </p>
+      <p class="mt-8 md:mt-12">
+      </p>
+        <CustomButton customButton={customButton}/>
+    </div>
+    <div class="text-center flex justify-center lg:ml-6">
+      <CustomImage src={profilePic} alt="imagen de perfil" width="33.813rem" />
+    </div>
+  </div>
+</section>
+

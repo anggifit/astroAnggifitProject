@@ -1,0 +1,42 @@
+---
+import ServiceCard from "../Homepage/ServiceCard.astro";
+import SectionLayout from "../../layouts/SectionLayout.astro";
+import pic1 from "../../assets/pic1.jpg";
+import pic2 from "../../assets/pic2.jpg";
+import pic3 from "../../assets/pic3.jpg";
+
+const sectionTitle = "Servicios ofrecidos";
+const servicesList = [
+  {
+    src: pic1,
+    alt: "Plan de Alimentación ",
+    title: "Plan de Alimentación ",
+    description:
+      "Un plan de nutrición diseñado exclusivamente para ti, basado en tus necesidades y objetivos específicos.",
+  },
+  {
+    src: pic2,
+    alt: "Asesoramiento Nutricional",
+    title: "Asesoramiento Nutricional",
+    description:
+      "Consulta personalizada para ayudarte a entender y mejorar tus hábitos alimenticios y lograr un estilo de vida saludable.",
+  },
+  {
+    src: pic3,
+    alt: "Seguimiento Nutricional",
+    title: "Seguimiento Nutricional",
+    description:
+      "Monitorización continua de tu progreso con ajustes a tu plan de alimentación para garantizar resultados óptimos.",
+  },
+];
+---
+
+<SectionLayout sectionTitle={sectionTitle}>
+  <div class="max-w-[1089px] mx-auto flex flex-wrap justify-center">
+    {
+      servicesList.map((item) => (
+        <ServiceCard src={item.src} alt={item.alt} title={item.title} />
+      ))
+    }
+  </div>
+</SectionLayout>

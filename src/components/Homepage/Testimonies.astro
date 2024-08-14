@@ -1,0 +1,27 @@
+---
+import SectionLayout from "../../layouts/SectionLayout.astro";
+import CustomImage from "../CustomImage.astro";
+import testimoniePic from "../../assets/element5-digital-CpBBsda2eRI-unsplash (2).jpg";
+
+const alt = "Testimonio";
+---
+
+<SectionLayout sectionTitle="Experiencias de Bienestar">
+    <div class="w-[1089px] mx-auto flex flex-wrap justify-center">
+      <div class="grid grid-cols-3 grid-rows-5 gap-10 items-center justify-items-center">
+        <div class="row-span-4 flex justify-center items-center">
+          <CustomImage src={testimoniePic} alt={alt} width="253.62px" />
+        </div>
+        <div class="col-span-2 row-span-2 col-start-2 row-start-2 flex flex-col items-center">
+          <p class="w-[616px] h-[137px] italic text-left">
+            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.“
+          </p>
+          <p class="w-[616px] h-9 text-left">Maria Perez</p>
+        </div>
+      </div>
+    </div>
+  </SectionLayout>
+  
