@@ -11,8 +11,8 @@ export default {
     },
     fontSize: {
       sm: "0.8rem",
-      base: "1.125rem", // 18px
-      xl: "1.75rem", // 28px (necesario para otros elementos)
+      base: "1rem", // 16px
+      xl: "1.5rem", //
       "2xl": "1.875rem", // 30px (H3)
       "3xl": "2.375rem", // 38px (H2)
       "4xl": "2.75rem", // 44px (H1)

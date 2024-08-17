@@ -1,0 +1,51 @@
+---
+import SectionLayout from "../../layouts/SectionLayout.astro";
+import Accordion from "../Homepage/Accordion.astro";
+
+const sectionTitle = "Resuelve tus Dudas Aquí";
+const subtitle =
+  "Explora nuestras respuestas a las preguntas más habituales para entender mejor cómo trabajaremos juntos para mejorar tu bienestar.";
+const data = [
+  {
+    question: "¿Cómo es el proceso de una consulta de nutrición en línea?",
+    answer:
+      "El proceso comienza con una evaluación inicial, donde discutimos tus objetivos y hábitos alimenticios actuales. Luego, elaboro un plan personalizado que incluye recomendaciones dietéticas y rutinas de ejercicio. Seguimos en contacto regularmente para ajustar el plan según tu progreso.",
+  },
+  {
+    question: "¿Qué necesito para comenzar mi consulta de nutrición?",
+    answer:
+      "Solo necesitas una conexión a internet, un dispositivo móvil o computadora, y estar listo para comprometerte con un plan de alimentación y bienestar. También es útil tener una lista de tus hábitos alimenticios actuales y tus metas de salud.",
+  },
+  {
+    question: "¿Las consultas incluyen seguimiento y ajustes al plan?",
+    answer:
+      "Sí, las consultas incluyen un seguimiento continuo para evaluar tu progreso. Realizamos ajustes al plan de acuerdo a tus resultados, asegurándonos de que siempre estés avanzando hacia tus metas.",
+  },
+  {
+    question:
+      "¿Puedo realizar una consulta de nutrición si tengo restricciones alimentarias?",
+    answer:
+      "Absolutamente. Mi enfoque es personalizar cada plan de acuerdo a tus necesidades, incluidas cualquier restricción alimentaria que puedas tener. Trabajaremos juntos para encontrar las mejores opciones que se adapten a ti.",
+  },
+  {
+    question: "¿Cuánto tiempo dura cada consulta?",
+    answer:
+      "La duración de cada consulta puede variar, pero generalmente las sesiones iniciales duran entre 45 y 60 minutos. Las consultas de seguimiento suelen ser más cortas, entre 30 y 45 minutos, dependiendo de tus necesidades.",
+  },
+  {
+    question: "¿Cómo se manejan los pagos y las tarifas?",
+    answer:
+      "Los pagos se realizan en línea de manera segura antes de cada consulta. Las tarifas varían según el tipo de servicio que elijas, y puedes consultar los detalles en la sección de precios de mi página web.",
+  },
+];
+---
+
+<SectionLayout sectionTitle={sectionTitle} subtitle={subtitle}>
+  <div class="mx-auto w-[1300px]">
+    {
+      data.map((item) => (
+        <Accordion question={item.question} answer={item.answer} />
+      ))
+    }
+  </div>
+</SectionLayout>

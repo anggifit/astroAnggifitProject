@@ -3,8 +3,12 @@ import SectionLayout from "../../layouts/SectionLayout.astro";
 import PriceCard from "../Homepage/PriceCard.astro";
 
 const sectionTitle = "Precios y Opciones";
+const subtitle = "Encuentra la mejor opción para alcanzar tus metas de salud";
+const plans = ["Plan 1", "Plan 2", "Plan 3"];
 ---
 
-<SectionLayout sectionTitle={sectionTitle}> 
-    <PriceCard />
+<SectionLayout sectionTitle={sectionTitle} subtitle={subtitle}>
+  <div class="mx-auto flex flex-wrap">
+    {plans.map((plan) => <PriceCard item={plan} />)}
+  </div>
 </SectionLayout>
