@@ -3,6 +3,9 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 const { pageTitle } = Astro.props;
+const whatsapp = import.meta.env.PUBLIC_WHATSAPP_NUMBER
+const mensajeWhatsApp = "Hola,%20Estoy%20interesado/a%20en%20recibir%20más%20información%20sobre%20el%20plan%20de%20alimentación.%20¿Podrías%20ayudarme?";
+
 ---
 
 <html lang="en">
@@ -16,6 +19,13 @@ const { pageTitle } = Astro.props;
   <body>
     <Header />
     <slot />
+    <a
+      href=`https://wa.me/${whatsapp}?text=${mensajeWhatsApp}`
+      class="fixed w-14 h-14 bottom-10 right-10 text-center font-2xl z-100"
+      target="_blank"
+    >
+      <img src = "/whatsapp-logo-48.png" alt="Enviar mensaje via whatsapp" style="margin-top:16px;"></i>
+    </a>
     <Footer />
   </body>
 </html>
