@@ -3,17 +3,16 @@ import SectionLayout from "../../layouts/SectionLayout.astro";
 import CustomImage from "../CustomImage.astro";
 import CustomButton from "../CustomButton.astro";
 import poleUrbano from "../../assets/anggi-pole-urbano.jpeg";
+import data from "../../data.json"
 
 const { sectionTitle } = Astro.props;
 const customButton = "Mas acerca de mi";
-const aboutMeText =
-  "Con más de 13 años de experiencia en nutrición, mi compromiso es ayudarte a transformar tu vida a través de una dieta equilibrada y un plan de ejercicios que realmente funcione para ti. Cada recomendación está basada en ciencia y adaptada a tus necesidades personales. ¡Haz clic aquí para saber más sobre mi trayectoria y enfoque!";
+const aboutMeText = data.aboutMe.shortDescription;
 ---
 
 <SectionLayout sectionTitle={sectionTitle}>
   <div class="flex flex-row justify-center mx-10">
     <div class="w-[1537px] relative">
-      <!-- Contenedor con posición relativa -->
       <div class="grid grid-cols-4 grid-rows-5 gap-4 p-2">
         <div class="col-span-2 row-span-3 place-self-center relative">
           <div
@@ -28,7 +27,7 @@ const aboutMeText =
           />
         </div>
         <div class="col-span-2 row-span-3 col-start-3 self-center">
-          <p class="px-6 mr-2">
+          <p class="px-6 mr-2 leading-loose">
             {aboutMeText}
           </p>
           <div class="flex justify-end py-4 my-2">

@@ -2,6 +2,7 @@
 import CustomImage from "../CustomImage.astro";
 import profilePic from "../../assets/profile-pic.jpeg";
 import CustomButton from "../CustomButton.astro";
+import data from "../../data.json"
 const { customButton } = Astro.props;
 ---
 
@@ -14,7 +15,7 @@ const { customButton } = Astro.props;
     <div
       class="text-center lg:w-1/2 lg:text-left flex flex-col items-start"
     >
-      <h1 class="leading-normal">Equilibrio y bienestar a tu alcance.</h1>
+      <h1 class="leading-normal">{data.mainTitle}</h1>
       <p class="mt-6">
         ¿Quieres optimizar tu nutrición y rendimiento deportivo de la manera más
         cómoda?

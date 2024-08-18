@@ -1,0 +1,133 @@
+{
+  "mainTitle": "Equilibrio y bienestar a tu alcance",
+  "aboutMe": {
+    "shortDescription": "Con más de 13 años de experiencia en nutrición, mi compromiso es ayudarte a transformar tu vida a través de una dieta equilibrada y un plan de ejercicios que realmente funcione para ti. Cada recomendación está basada en ciencia y adaptada a tus necesidades personales. ¡Haz click para saber más sobre mi trayectoria y enfoque!",
+    "longDescription1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "longDescription2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  "testimonies": [
+    {
+      "name": "María López",
+      "text": "Desde que comencé mi plan de nutrición, he visto cambios increíbles en mi energía y bienestar general. La personalización del plan realmente hizo la diferencia, y el seguimiento constante me mantuvo motivada. ¡Recomiendo este servicio a cualquiera que quiera mejorar su salud de manera efectiva!"
+    },
+    {
+      "name": "Juan Martínez",
+      "text": "Nunca pensé que podría disfrutar tanto de un plan nutricional hasta que empecé con [Tu Nombre]. Las consultas en línea son súper convenientes y el apoyo que recibo es excepcional. He perdido peso de manera saludable y me siento mejor que nunca. ¡Gracias por ayudarme a cambiar mi vida!"
+    },
+    {
+      "name": "Laura García",
+      "text": "Lo que más me impresionó fue lo fácil que fue integrar los consejos de [Tu Nombre] en mi vida diaria. No solo he alcanzado mis metas de peso, sino que también he aprendido a comer de una manera que me hace sentir bien todos los días. Las recetas y rutinas sugeridas son fantásticas. ¡Un servicio de 10!"
+    }
+  ],
+  "services": [
+    {
+      "name": "Consulta Online",
+      "shortDescription": "Comodidad y flexibilidad para atender tus necesidades nutricionales desde donde estés.",
+      "plans": [
+        {
+          "name": "Plan 1",
+          "price": "$40 por sesión (estándar)",
+          "features": [
+            "Evaluación inicial personalizada",
+            "Plan de alimentación adaptado a tus objetivos",
+            "Sesiones de seguimiento y ajustes mensuales",
+            "Acceso a material educativo exclusivo"
+          ]
+        },
+        {
+          "name": "Plan 2",
+          "price": "$96 (pago único por 3 sesiones)",
+          "features": [
+            "Evaluación inicial personalizada",
+            "Plan de alimentación adaptado a tus objetivos",
+            "Sesiones de seguimiento y ajustes mensuales",
+            "Acceso a material educativo exclusivo"
+          ]
+        },
+        {
+          "name": "Plan 3",
+          "price": "$150 (pago único por 5 sesiones)",
+          "features": [
+            "Evaluación inicial personalizada",
+            "Plan de alimentación adaptado a tus objetivos",
+            "Sesiones de seguimiento y ajustes mensuales",
+            "Acceso a material educativo exclusivo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Consulta a Domicilio",
+      "shortDescription": "Atención nutricional personalizada en la comodidad de tu hogar.",
+      "plans": [
+        {
+          "name": "Plan 1",
+          "price": "$60 por sesión (estándar)",
+          "features": [
+            "Evaluación inicial personalizada",
+            "Plan de alimentación adaptado a tus objetivos",
+            "Sesiones de seguimiento y ajustes mensuales",
+            "Acceso a material educativo exclusivo"
+          ]
+        },
+        {
+          "name": "Plan 2",
+          "price": "$180 (pago único por 3 sesiones)",
+          "features": [
+            "Evaluación inicial personalizada",
+            "Plan de alimentación adaptado a tus objetivos",
+            "Sesiones de seguimiento y ajustes mensuales",
+            "Acceso a material educativo exclusivo"
+          ]
+        },
+        {
+          "name": "Plan 3",
+          "price": "$300 (pago único por 5 sesiones)",
+          "features": [
+            "Evaluación inicial personalizada",
+            "Plan de alimentación adaptado a tus objetivos",
+            "Sesiones de seguimiento y ajustes mensuales",
+            "Acceso a material educativo exclusivo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Entrenamiento Personalizado",
+      "shortDescription": "Programas de ejercicio diseñados para complementar tu plan nutricional y maximizar resultados.",
+      "features": [
+        "Evaluación inicial de condición física",
+        "Rutina de ejercicios adaptada a tus necesidades",
+        "Instrucción y corrección de técnica",
+        "Seguimiento del progreso y ajustes en tiempo real"
+      ],
+      "price": "$40 por sesión"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "¿Cómo es el proceso de una consulta de nutrición en línea?",
+      "answer": "El proceso comienza con una evaluación inicial, donde discutimos tus objetivos y hábitos alimenticios actuales. Luego, elaboro un plan personalizado que incluye recomendaciones dietéticas y rutinas de ejercicio. Seguimos en contacto regularmente para ajustar el plan según tu progreso."
+    },
+    {
+      "question": "¿Qué necesito para comenzar mi consulta de nutrición?",
+      "answer": "Solo necesitas una conexión a internet, un dispositivo móvil o computadora, y estar listo para comprometerte con un plan de alimentación y bienestar. También es útil tener una lista de tus hábitos alimenticios actuales y tus metas de salud."
+    },
+    {
+      "question": "¿Las consultas incluyen seguimiento y ajustes al plan?",
+      "answer": "Sí, las consultas incluyen un seguimiento continuo para evaluar tu progreso. Realizamos ajustes al plan de acuerdo a tus resultados, asegurándonos de que siempre estés avanzando hacia tus metas."
+    },
+    {
+      "question": "¿Puedo realizar una consulta de nutrición si tengo restricciones alimentarias?",
+      "answer": "Absolutamente. Mi enfoque es personalizar cada plan de acuerdo a tus necesidades, incluidas cualquier restricción alimentaria que puedas tener. Trabajaremos juntos para encontrar las mejores opciones que se adapten a ti."
+    },
+    {
+      "question": "¿Cuánto tiempo dura cada consulta?",
+      "answer": "La duración de cada consulta puede variar, pero generalmente las sesiones iniciales duran entre 45 y 60 minutos. Las consultas de seguimiento suelen ser más cortas, entre 30 y 45 minutos, dependiendo de tus necesidades."
+    },
+    {
+      "question": "¿Cómo se manejan los pagos y las tarifas?",
+      "answer": "Los pagos se realizan en línea de manera segura antes de cada consulta. Las tarifas varían según el tipo de servicio que elijas, y puedes consultar los detalles en la sección de precios de mi página web."
+    }
+  ]
+}
