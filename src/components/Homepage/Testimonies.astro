@@ -1,32 +1,57 @@
 ---
 import SectionLayout from "../../layouts/SectionLayout.astro";
-import CustomImage from "../CustomImage.astro";
-import testimoniePic from "../../assets/element5-digital-CpBBsda2eRI-unsplash (2).jpg";
+import TestimonieCard from "../Homepage/Cards/TestimonieCard.astro";
+import profile1 from "../../assets/testi-profile1.jpg";
+import profile2 from "../../assets/testi-profile2.jpg";
+import profile3 from "../../assets/testi-profile3.jpg";
+import data from "../../data.json";
 
-const alt = "Testimonio";
 const sectionTitle = "Experiencias de Bienestar";
 const subtitle = "Testimonios que inspiran una vida saludable";
+
+const testimonies = data.testimonies;
+const currentIndex = 0;
 ---
 
 <SectionLayout sectionTitle={sectionTitle} subtitle={subtitle}>
-  <div class="w-[1089px] mx-auto flex flex-wrap justify-center">
+  <div class="relative overflow-hidden w-full max-w-[1089px] mx-auto">
     <div
-      class="grid grid-cols-3 grid-rows-5 gap-10 items-center justify-items-center"
+      id="carousel"
+      class="flex transition-transform duration-700 ease-in-out"
     >
-      <div class="row-span-4 flex justify-center items-center">
-        <CustomImage src={testimoniePic} alt={alt} width="253.62px" />
-      </div>
-      <div
-        class="col-span-2 row-span-2 col-start-2 row-start-2 flex flex-col items-center"
-      >
-        <p class="w-[616px] h-[137px] italic text-left">
-          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.“
-        </p>
-        <p class="w-[616px] h-9 text-left">Maria Perez</p>
-      </div>
+    {
+      testimonies.map((item, index) => {
+        const testimoniesImages = [profile1, profile2, profile3];
+        const imagesSrc = testimoniesImages[index];
+        
+        return (
+          <div key={index} class="w-full flex-shrink-0">
+            <TestimonieCard
+              testimoniePic={imagesSrc}
+              alt={item.name}
+              text={item.text}
+              name={item.name}
+            />
+          </div>
+        );
+      })
+    }
     </div>
+    <button
+      id="prev-btn"
+      class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-700 text-atlantis-900 z-10"
+    >
+      ◀️
+    </button>
+    <button
+      id="next-btn"
+      class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-700 text-atlantis-900 p-2 z-10"
+    >
+      ▶️
+    </button>
   </div>
+
+  <script>
+    import "../../scripts/carouselSetup.js";
+  </script>
 </SectionLayout>

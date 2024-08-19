@@ -1,43 +1,27 @@
 ---
-import ServiceCard from "../Homepage/ServiceCard.astro";
+import ServiceCard from "../Homepage/Cards/ServiceCard.astro";
 import SectionLayout from "../../layouts/SectionLayout.astro";
+import data from "../../data.json";
 import pic1 from "../../assets/pic1.jpg";
 import pic2 from "../../assets/pic2.jpg";
 import pic3 from "../../assets/pic3.jpg";
 
 const sectionTitle = "Servicios ofrecidos";
-/* const subtitle = "" */
-const servicesList = [
-  {
-    src: pic1,
-    alt: "Plan de Alimentación ",
-    title: "Servicio 1",
-    description:
-      "Un plan de nutrición diseñado exclusivamente para ti, basado en tus necesidades y objetivos específicos.",
-  },
-  {
-    src: pic2,
-    alt: "Asesoramiento Nutricional",
-    title: "Servicio 2",
-    description:
-      "Consulta personalizada para ayudarte a entender y mejorar tus hábitos alimenticios y lograr un estilo de vida saludable.",
-  },
-  {
-    src: pic3,
-    alt: "Seguimiento Nutricional",
-    title: "Servicio 3",
-    description:
-      "Monitorización continua de tu progreso con ajustes a tu plan de alimentación para garantizar resultados óptimos.",
-  },
-];
+const subtitle = "Explora los Planes y Consultas";
+
 ---
 
 <SectionLayout sectionTitle={sectionTitle}>
   <div class="max-w-[1089px] mx-auto flex flex-wrap justify-center">
     {
-      servicesList.map((item) => (
-        <ServiceCard src={item.src} alt={item.alt} title={item.title} />
-      ))
+      data.services.map((item, index) => {
+        const images = [pic1, pic2, pic3]
+        const imagesSrc = images[index]
+        return (
+
+          <ServiceCard src={imagesSrc} alt={item.name} title={item.name} />
+        ) 
+      })
     }
   </div>
 </SectionLayout>
