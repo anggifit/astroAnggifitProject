@@ -1,13 +1,26 @@
 ---
 import SectionLayout from "../../layouts/SectionLayout.astro";
 import PriceCard from "../Homepage/Cards/PriceCard.astro";
+import SquareButton from "../SquareButton.astro";
+import data from "../../data.json";
 
 const sectionTitle = "Precios y Opciones";
 const subtitle = "Encuentra la mejor opción para alcanzar tus metas de salud";
+const text = "Online";
 const plans = ["Plan 1", "Plan 2", "Plan 3"];
 ---
 
 <SectionLayout sectionTitle={sectionTitle} subtitle={subtitle}>
+  <div class="flex justify-center mb-8">
+  {
+    data.services.map((item) => (
+      <div class="mx-4">
+        <SquareButton text={item.shortName} />
+        </div>
+        ))
+      }
+      </div>
+
   <div class="mx-auto flex flex-wrap">
     {plans.map((plan) => <PriceCard item={plan} />)}
   </div>

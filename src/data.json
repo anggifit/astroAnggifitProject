@@ -12,52 +12,62 @@
     },
     {
       "name": "Juan Martínez",
-      "text": "Nunca pensé que podría disfrutar tanto de un plan nutricional hasta que empecé con [Tu Nombre]. Las consultas en línea son súper convenientes y el apoyo que recibo es excepcional. He perdido peso de manera saludable y me siento mejor que nunca. ¡Gracias por ayudarme a cambiar mi vida!"
+      "text": "Nunca pensé que podría disfrutar tanto de un plan nutricional hasta que empecé con este control. Las consultas en línea son súper convenientes y el apoyo que recibo es excepcional. He perdido peso de manera saludable y me siento mejor que nunca. ¡Gracias por ayudarme a cambiar mi vida!"
     },
     {
       "name": "Laura García",
-      "text": "Lo que más me impresionó fue lo fácil que fue integrar los consejos de [Tu Nombre] en mi vida diaria. No solo he alcanzado mis metas de peso, sino que también he aprendido a comer de una manera que me hace sentir bien todos los días. Las recetas y rutinas sugeridas son fantásticas. ¡Un servicio de 10!"
+      "text": "Lo que más me impresionó fue lo fácil que fue integrar los consejos de anggi en mi vida diaria. No solo he alcanzado mis metas de peso, sino que también he aprendido a comer de una manera que me hace sentir bien todos los días. Las recetas y rutinas sugeridas son fantásticas. ¡Un servicio de 10!"
     }
   ],
   "services": [
     {
       "name": "Consulta Online",
+      "shortName":"Online",
       "shortDescription": "Comodidad y flexibilidad para atender tus necesidades nutricionales desde donde estés.",
       "plans": [
         {
-          "name": "Plan 1",
+          "name": "Plan Básico",
           "price": "$40 por sesión (estándar)",
           "features": [
-            "Evaluación inicial personalizada",
-            "Plan de alimentación adaptado a tus objetivos",
-            "Sesiones de seguimiento y ajustes mensuales",
-            "Acceso a material educativo exclusivo"
+            "Evaluación nutricional inicial mediante videollamada (45-60 min).",
+            "Plan de alimentacion personalizado",
+            "Guia de porciones y sustitutos, alternativas para hacer el plan más versátil.",
+            "Lista de Compras: Todo lo que necesitas para seguir el plan.",
+            "Sesion de seguimiento por videollamada (15 min) a los 15 dias de iniciado el plan.",
+            "Acompañamiento via WS, por 30 dias."
           ]
         },
         {
-          "name": "Plan 2",
+          "name": "Plan Avanzado",
           "price": "$96 (pago único por 3 sesiones)",
           "features": [
-            "Evaluación inicial personalizada",
-            "Plan de alimentación adaptado a tus objetivos",
-            "Sesiones de seguimiento y ajustes mensuales",
-            "Acceso a material educativo exclusivo"
+            "Evaluación nutricional inicial mediante videollamada (45-60 min).",
+            "Plan de alimentación personalizado",
+            "Control nutricional mensual: 2 sesiones por videollamada (30-45 min) con el respectivo ajuste del plan de alimentacion",
+            "Acompañamiento continuo vía WhatsApp",
+            "Guia de porciones y sustitutos, alternativas para hacer el plan más versátil.",
+            "Lista de compras con todo lo necesario para seguir el plan.", 
+            "Acceso a app de seguimiento nutricional"
           ]
         },
         {
           "name": "Plan 3",
           "price": "$150 (pago único por 5 sesiones)",
           "features": [
-            "Evaluación inicial personalizada",
-            "Plan de alimentación adaptado a tus objetivos",
-            "Sesiones de seguimiento y ajustes mensuales",
-            "Acceso a material educativo exclusivo"
+            "Evaluación nutricional inicial mediante videollamada (45-60 min).",
+            "Plan de alimentación personalizado",
+            "Control nutricional mensual: 4 sesiones por videollamada (30-45 min) con el respectivo ajuste del plan de alimentacion",
+            "Acompañamiento continuo vía WhatsApp",
+            "Guia de porciones y sustitutos, alternativas para hacer el plan más versátil.",
+            "Lista de compras con todo lo necesario para seguir el plan.", 
+            "Acceso a </br>app de seguimiento nutricional"
           ]
         }
       ]
     },
     {
       "name": "Consulta a Domicilio",
+      "shortName":"A Domicilio",
       "shortDescription": "Atención nutricional personalizada en la comodidad de tu hogar.",
       "plans": [
         {
@@ -94,6 +104,7 @@
     },
     {
       "name": "Entrenamiento Personalizado",
+      "shortName":"Entrenamiento",
       "shortDescription": "Programas de ejercicio diseñados para complementar tu plan nutricional y maximizar resultados.",
       "features": [
         "Evaluación inicial de condición física",

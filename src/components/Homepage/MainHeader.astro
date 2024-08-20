@@ -2,8 +2,12 @@
 import CustomImage from "../CustomImage.astro";
 import profilePic from "../../assets/profile-pic.jpeg";
 import CustomButton from "../CustomButton.astro";
-import data from "../../data.json"
+import data from "../../data.json";
+
 const { customButton } = Astro.props;
+const whatsapp = import.meta.env.PUBLIC_WHATSAPP_NUMBER;
+const mensajeWhatsApp =
+  "Hola,%20Estoy%20interesado/a%20en%20recibir%20más%20información%20sobre%20el%20plan%20de%20alimentación.%20¿Podrías%20ayudarme?";
 ---
 
 <section
@@ -12,9 +16,7 @@ const { customButton } = Astro.props;
   <div
     class="container mx-auto px-8 flex flex-col lg:flex-row items-center justify-center h-full"
   >
-    <div
-      class="text-center lg:w-1/2 lg:text-left flex flex-col items-start"
-    >
+    <div class="text-center lg:w-1/2 lg:text-left flex flex-col items-start">
       <h1 class="leading-normal">{data.mainTitle}</h1>
       <p class="mt-6">
         ¿Quieres optimizar tu nutrición y rendimiento deportivo de la manera más
@@ -29,13 +31,16 @@ const { customButton } = Astro.props;
         Todo el proceso es sencillo y accesible desde tu móvil, con un
         seguimiento constante y ajustes según tu progreso.
       </p>
-      <p class="mt-8 md:mt-12">
-      </p>
-        <CustomButton customButton={customButton}/>
+      <p class="mt-8 md:mt-12"></p>
+      <a
+        href=`https://wa.me/${whatsapp}?text=${mensajeWhatsApp}`
+        target="_blank"
+      >
+        <CustomButton customButton={customButton} />
+      </a>
     </div>
     <div class="text-center flex justify-center lg:ml-6">
       <CustomImage src={profilePic} alt="imagen de perfil" width="33.813rem" />
     </div>
   </div>
 </section>
-
