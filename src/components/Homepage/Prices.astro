@@ -1,27 +1,43 @@
 ---
+import { useState } from 'preact/hooks';
 import SectionLayout from "../../layouts/SectionLayout.astro";
 import PriceCard from "../Homepage/Cards/PriceCard.astro";
-import SquareButton from "../SquareButton.astro";
+import SquareButton from "../SquareButton.jsx";
 import data from "../../data.json";
 
 const sectionTitle = "Precios y Opciones";
 const subtitle = "Encuentra la mejor opción para alcanzar tus metas de salud";
-const text = "Online";
-const plans = ["Plan 1", "Plan 2", "Plan 3"];
+
+const [isActive, setIsActive] = useState(false);
+
+function handleClick() {
+  setIsActive(true)
+}
 ---
 
 <SectionLayout sectionTitle={sectionTitle} subtitle={subtitle}>
   <div class="flex justify-center mb-8">
-  {
-    data.services.map((item) => (
-      <div class="mx-4">
-        <SquareButton text={item.shortName} />
+    {
+      data.services.map((item) => (
+        <div class="mx-4">
+          <SquareButton 
+          text={item.shortName} 
+          onClick= {()=>handleClick()} />
         </div>
-        ))
-      }
-      </div>
-
-  <div class="mx-auto flex flex-wrap">
-    {plans.map((plan) => <PriceCard item={plan} />)}
+      ))
+    }
+  </div>
+  <div class="mx-auto flex flex-wrap mb-14">
+    {
+      data.services.map((service, serviceIndex) =>
+        service.plans.map((plan, planIndex) => (
+          <PriceCard
+            item={plan.name}
+            features={plan.features}
+            key={`${serviceIndex}-${planIndex}`}
+          />
+        )),
+      )
+    }re
   </div>
 </SectionLayout>

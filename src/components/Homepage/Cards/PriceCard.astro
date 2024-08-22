@@ -1,14 +1,14 @@
 ---
 import CustomButton from "../../CustomButton.astro";
 
-const { item } = Astro.props;
+const { item, features } = Astro.props;
 const customButton = "Empieza ya";
 ---
 
 <div
-  class="relative w-[21.875rem] mx-auto h-[32.375em] overflow-hidden bg-atlantis-100 rounded-lg shadow-md rounded-tr-[60px] rounded-bl-[60px] pb-16 flex flex-col justify-between"
+  class="relative w-[21.875rem] mx-auto bg-atlantis-100 rounded-lg shadow-md rounded-tr-[60px] rounded-bl-[60px] pb-16 flex flex-col"
 >
-  <div>
+  <div class="flex-grow">
     <div class="p-4 flex flex-col items-center justify-center">
       <p class="text-[24px] font-semibold text-center p-4 pb-6">{item}</p>
       <svg
@@ -22,31 +22,19 @@ const customButton = "Empieza ya";
         <path d="M0 2L187 1" stroke="#3C3C3C"></path>
       </svg>
     </div>
-    <ul class="text-left pl-8 list-none">
-      <li
-        class="py-3 flex items-center before:content-[''] before:block before:w-4 before:h-4 before:bg-[url('/comprobado.png')] before:bg-cover before:bg-no-repeat before:mr-2"
-      >
-        1 Mentoring class
-      </li>
-      <li
-        class="py-3 flex items-center before:content-[''] before:block before:w-4 before:h-4 before:bg-[url('/comprobado.png')] before:bg-cover before:bg-no-repeat before:mr-2"
-      >
-        Books and video material
-      </li>
-      <li
-        class="py-3 flex items-center before:content-[''] before:block before:w-4 before:h-4 before:bg-[url('/comprobado.png')] before:bg-cover before:bg-no-repeat before:mr-2"
-      >
-        Consultation
-      </li>
-      <li
-        class="py-3 flex items-center before:content-[''] before:block before:w-4 before:h-4 before:bg-[url('/comprobado.png')] before:bg-cover before:bg-no-repeat before:mr-2"
-      >
-        1 free webinars
-      </li>
+    <ul class="text-left pl-4 list-none mb-16">
+      {
+        features.map((feat) => (
+          <li
+            class="py-3 flex items-center before:content-[''] before:block before:w-4 before:h-4 before:bg-[url('/comprobado.png')] before:bg-cover before:bg-no-repeat before:mr-3 text-pretty"
+          >
+            {feat}
+          </li>
+        ))
+      }
     </ul>
   </div>
-
-  <div class="absolute bottom-4 right-4 my-4">
+  <div class="absolute bottom-4 right-4">
     <CustomButton customButton={customButton} />
   </div>
 </div>

@@ -29,38 +29,37 @@
           "name": "Plan Básico",
           "price": "$40 por sesión (estándar)",
           "features": [
-            "Evaluación nutricional inicial mediante videollamada (45-60 min).",
-            "Plan de alimentacion personalizado",
-            "Guia de porciones y sustitutos, alternativas para hacer el plan más versátil.",
-            "Lista de Compras: Todo lo que necesitas para seguir el plan.",
-            "Sesion de seguimiento por videollamada (15 min) a los 15 dias de iniciado el plan.",
-            "Acompañamiento via WS, por 30 dias."
+            "Evaluación inicial (videollamada 45-60 min)",
+            "Plan de alimentación personalizado",
+            "Guía de porciones y sustitutos",
+            "Seguimiento (videollamada 15 min)",
+            "Acompañamiento por WhatsApp (30 días)"
           ]
         },
         {
           "name": "Plan Avanzado",
           "price": "$96 (pago único por 3 sesiones)",
           "features": [
-            "Evaluación nutricional inicial mediante videollamada (45-60 min).",
+            "Evaluación inicial (videollamada 45-60 min)",
             "Plan de alimentación personalizado",
-            "Control nutricional mensual: 2 sesiones por videollamada (30-45 min) con el respectivo ajuste del plan de alimentacion",
-            "Acompañamiento continuo vía WhatsApp",
-            "Guia de porciones y sustitutos, alternativas para hacer el plan más versátil.",
-            "Lista de compras con todo lo necesario para seguir el plan.", 
-            "Acceso a app de seguimiento nutricional"
+            "Control mensual (2 videollamadas 30-45 min)",
+            "Acompañamiento continuo por WhatsApp",
+            "Guía de porciones y sustitutos",
+            "Lista de compras",
+            "Acceso a app de seguimiento"
           ]
         },
         {
-          "name": "Plan 3",
+          "name": "Plan Premium",
           "price": "$150 (pago único por 5 sesiones)",
           "features": [
-            "Evaluación nutricional inicial mediante videollamada (45-60 min).",
+            "Evaluación inicial (videollamada 45-60 min)",
             "Plan de alimentación personalizado",
-            "Control nutricional mensual: 4 sesiones por videollamada (30-45 min) con el respectivo ajuste del plan de alimentacion",
-            "Acompañamiento continuo vía WhatsApp",
-            "Guia de porciones y sustitutos, alternativas para hacer el plan más versátil.",
-            "Lista de compras con todo lo necesario para seguir el plan.", 
-            "Acceso a </br>app de seguimiento nutricional"
+            "Control mensual (4 videollamadas 30-45 min)",
+            "Acompañamiento continuo por WhatsApp",
+            "Guía de porciones y sustitutos",
+            "Lista de compras",
+            "Acceso a app de seguimiento"
           ]
         }
       ]
@@ -105,14 +104,19 @@
     {
       "name": "Entrenamiento Personalizado",
       "shortName":"Entrenamiento",
-      "shortDescription": "Programas de ejercicio diseñados para complementar tu plan nutricional y maximizar resultados.",
-      "features": [
-        "Evaluación inicial de condición física",
-        "Rutina de ejercicios adaptada a tus necesidades",
-        "Instrucción y corrección de técnica",
-        "Seguimiento del progreso y ajustes en tiempo real"
-      ],
-      "price": "$40 por sesión"
+      "shortDescription": "Programas de ejercicio diseñados para complementar tu plan nutricional y maximizar resultados",
+      "plans": [
+        {
+          "name": "Just trainning",
+          "price": "$40 por sesión (estándar)",
+          "features": [
+            "Evaluación inicial de condición física",
+            "Rutina de ejercicios adaptada a tus necesidades",
+            "Instrucción y corrección de técnica",
+            "Seguimiento del progreso y ajustes en tiempo real"
+          ]
+        }
+      ]
     }
   ],
   "faqs": [
