@@ -10,7 +10,7 @@ const dataFaq = data.faqs;
 ---
 
 <SectionLayout sectionTitle={sectionTitle} subtitle={subtitle}>
-  <div class="mx-auto w-[1300px]">
+  <div class="mx-auto w-[1300px] pb-10">
     {
       dataFaq.map((item) => (
         <Accordion question={item.question} answer={item.answer} />
