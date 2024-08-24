@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import RecipeList from "../components/RecipeList.astro";
-import RecipeCard from "../components/RecipeCard.astro";
+import RecipeList from "../components/Nutrirecetas/RecipeList.astro";
+import RecipeCard from "../components/Nutrirecetas/RecipeCard.astro";
 
 const allRecipes = await Astro.glob("../pages/nutrirecetas/*.md");
 const pageTitle = "Nutrirecetas";

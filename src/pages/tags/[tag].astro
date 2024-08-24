@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import RecipeList from "../../components/RecipeList.astro";
+import RecipeList from "../../components/Nutrirecetas/RecipeList.astro";
 
 export async function getStaticPaths() {
   const allRecipes = await Astro.glob("../nutrirecetas/*.md");

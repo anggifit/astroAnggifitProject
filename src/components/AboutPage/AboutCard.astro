@@ -1,0 +1,60 @@
+---
+import { Image } from "astro:assets";
+
+const {
+  firstImg,
+  secondImg,
+  alt,
+  firstTitle,
+  firstText,
+  secondTitle,
+  secondText,
+} = Astro.props;
+---
+
+<div class="flex flex-row w-[1280px] mx-auto">
+  <Image
+    src={firstImg}
+    alt={alt}
+    class={`flex-grow h-[420px] rounded-tl-[60px] shadow-md relative z-20 object-cover border-r-8 border-atlantis-500`}
+  />
+  <div
+    class="flex flex-col justify-center items-start self-stretch flex-grow relative gap-[30px] p-[60px] bg-white rounded-r-xl"
+  >
+    <div
+      class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5 py-2 border-t-0 border-r-0 border-b-[3px] border-l-0 border-[#cbea7b]"
+    >
+      <p
+        class="flex-grow-0 flex-shrink-0 text-xl font-semibold text-left text-[#1a3129]"
+      >
+        {firstTitle}
+      </p>
+    </div>
+    <p class="self-stretch flex-grow-0 flex-shrink-0 w-[514px] text-left">
+      {firstText}
+    </p>
+  </div>
+</div>
+<div class="flex flex-row w-[1280px] mx-auto">
+  <div
+    class="flex flex-col justify-center items-end self-stretch flex-grow relative gap-[30px] p-[60px] bg-white rounded-r-xl"
+  >
+    <div
+      class="flex justify-end items-center flex-grow-0 flex-shrink-0 relative gap-2.5 py-2 border-t-0 border-r-0 border-b-[3px] border-l-0 border-[#cbea7b]"
+    >
+      <p
+        class="flex-grow-0 flex-shrink-0 text-xl font-semibold text-right text-[#1a3129]"
+      >
+        {secondTitle}
+      </p>
+    </div>
+    <p class="self-stretch flex-grow-0 flex-shrink-0 w-[514px] text-right">
+      {secondText}
+    </p>
+  </div>
+  <Image
+    src={secondImg}
+    alt={alt}
+    class={`flex-grow h-[420px] rounded-tr-[60px] shadow-md relative object-cover border-l-8 border-atlantis-500 ml-1`}
+  />
+</div>
