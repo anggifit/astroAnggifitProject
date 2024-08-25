@@ -1,13 +1,15 @@
 ---
 import AboutCard from "../components/AboutPage/AboutCard.astro";
-import ContactMe from "../components/ContactMe.astro"
-import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactMe from "../components/ContactMe.astro";
+import PageHeaderLayout from "../layouts/PageHeaderLayout.astro";
 import aboutSplit from "../assets/about-split.jpg";
 import aboutEvents from "../assets/about-events.jpg";
 import aboutTravel from "../assets/about-travel.jpg";
 import aboutDev from "../assets/about-dev.jpeg";
 
 const pageTitle = "Sobre mi";
+const pageSubtitle =
+  "Welcome to Nutritionist, your partner in achieving optimal health through personalized nutrition coaching. Our certified nutritionists are here to guide you on your weight loss journey.";
 
 const title1 = "Un Comienzo con Propósito";
 const title2 = "Titulo 2 Lorem ipsum dolor sit";
@@ -24,41 +26,26 @@ const text4 =
   "Cras molestie augue congue quam malesuada pulvinar. Maecenas urna magna, venenatis quis sagittis eget, commodo facilisis augue. Cras a neque sit amet sem imperdiet tempus. Donec scelerisque finibus massa, vel faucibus turpis porta dapibus. Praesent ac cursus dui, rutrum iaculis mi. Nam ornare odio ac fermentum elementum. In hac habitasse platea dictumst.";
 ---
 
-<BaseLayout>
-  <div class="min-h-[2800px] relative mb-40">
-    <div
-      class="bg-gradient-to-r from-atlantis-300 to-atlantis-100 h-[364px] relative"
-    >
-      <div class="flex flex-col items-center">
-        <h1 class="text-center pt-28 pb-10">{pageTitle}</h1>
-        <p class="w-[780px] text-center pb-5">
-          Welcome to Nutritionist, your partner in achieving optimal health
-          through personalized nutrition coaching. Our certified nutritionists
-          are here to guide you on your weight loss journey.
-        </p>
-      </div>
-
-      <section class="pt-5 pb-16">
-        <AboutCard
-          firstImg={aboutSplit}
-          secondImg={aboutEvents}
-          alt="imagen 1"
-          firstTitle={title1}
-          firstText={text1}
-          secondTitle={title2}
-          secondText={text2}
-        />
-        <AboutCard
-          firstImg={aboutTravel}
-          secondImg={aboutDev}
-          alt="imagen 1"
-          firstTitle={title3}
-          firstText={text3}
-          secondTitle={title4}
-          secondText={text4}
-        />
-        <ContactMe/>
-      </section>
-    </div>
-  </div>
-</BaseLayout>
+<PageHeaderLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle}>
+  <section class="pt-5 pb-16">
+    <AboutCard
+      firstImg={aboutSplit}
+      secondImg={aboutEvents}
+      alt="imagen 1"
+      firstTitle={title1}
+      firstText={text1}
+      secondTitle={title2}
+      secondText={text2}
+    />
+    <AboutCard
+      firstImg={aboutTravel}
+      secondImg={aboutDev}
+      alt="imagen 1"
+      firstTitle={title3}
+      firstText={text3}
+      secondTitle={title4}
+      secondText={text4}
+    />
+    <ContactMe />
+  </section>
+</PageHeaderLayout>
