@@ -1,10 +1,12 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHeaderLayout from "../layouts/PageHeaderLayout.astro";
 const { frontmatter } = Astro.props;
+const pageTitle = "Nutrirecetas";
+const pageSubtitle = "";
 ---
 
-<BaseLayout pageTitle={frontmatter.title}>
-  <body class="bg-gray-100">
+<PageHeaderLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle}>
+  <body class="bg-gray-100 mt-24">
     <div class="container mx-auto p-6">
       <div class="bg-white p-6 rounded-lg shadow-lg">
         <h1 class="text-2xl font-bold mb-4">
@@ -17,9 +19,7 @@ const { frontmatter } = Astro.props;
             alt={frontmatter.image.alt}
           />
           <div class="block">
-            <h2 class="text-xl font-semibold mb-2">
-              Ingredientes
-            </h2>
+            <h2 class="text-xl font-semibold mb-2">Ingredientes</h2>
             <ul class="list-disc list-inside mb-4">
               {
                 frontmatter.ingredients.map((ingredient) => (
@@ -30,23 +30,23 @@ const { frontmatter } = Astro.props;
           </div>
         </div>
 
-        <h2 class="text-xl font-semibold mb-2">
-          ¿Cómo Prepararlo?
-        </h2>
+        <h2 class="text-xl font-semibold mb-2">¿Cómo Prepararlo?</h2>
         <ol class="list-decimal list-inside mb-6">
           {frontmatter.steps.map((step) => <li class="mb-2">{step}</li>)}
         </ol>
       </div>
     </div>
-    
+
     <div class="flex flex-wrap">
       {
         frontmatter.tags.map((tag) => (
           <p class="m-1 py-2 px-4">
-            <a class="text-atlantis-700" href={`/tags/${tag}`}>{tag}</a>
+            <a class="text-atlantis-700" href={`/tags/${tag}`}>
+              {tag}
+            </a>
           </p>
         ))
       }
     </div>
   </body>
-</BaseLayout>
+</PageHeaderLayout>

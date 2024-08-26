@@ -1,15 +1,16 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeaderLayout from "../../layouts/PageHeaderLayout.astro";
 
 const allRecipes = await Astro.glob("../nutrirecetas/*.md");
 const tags = [
-  ...new Set(allRecipes.map((recipe) => recipe.frontmatter.tags).flat()),
+  ...new Set(allRecipes.map((recipe) => recipe.frontmatter.tags).flat())
 ];
 
-const pageTitle = "Indice de etiquetas";
+const pageTitle = "Encuentra tu receta";
+const pageSubtitle ="";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<PageHeaderLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle}>
   <div class="flex flex-wrap">
     {
       tags.map((tag) => (
@@ -19,4 +20,4 @@ const pageTitle = "Indice de etiquetas";
       ))
     }
   </div>
-</BaseLayout>
+</PageHeaderLayout>

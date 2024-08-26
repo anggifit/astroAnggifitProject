@@ -1,11 +1,11 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import RecipeList from "../../components/Nutrirecetas/RecipeList.astro";
+import PageHeaderLayout from "../../layouts/PageHeaderLayout.astro";
+import RecipeCard from "../../components/Nutrirecetas/RecipeCard.astro"
 
 export async function getStaticPaths() {
   const allRecipes = await Astro.glob("../nutrirecetas/*.md");
   const uniqueTags = [
-    ...new Set(allRecipes.map(recipe => recipe.frontmatter.tags).flat()),
+    ...new Set(allRecipes.map((recipe) => recipe.frontmatter.tags).flat()),
   ];
 
   return uniqueTags.map((tag) => {
@@ -21,15 +21,22 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 const { recipes } = Astro.props;
+
+const pageSubtitle = "";
 ---
 
-<BaseLayout pageTitle={tag}>
-  <p>Recetas etiquetadas con {tag}</p>
-  <ul>
-    {
-      recipes.map((recipe) => (
-        <RecipeList url={recipe.url} title={recipe.frontmatter.title} />
-      ))
-    }
-  </ul>
-</BaseLayout>
+<PageHeaderLayout pageTitle={tag}>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-2 py-6">
+      {
+        recipes.map((recipe) => (
+          <RecipeCard
+          imageSrc={recipe.frontmatter.image.url}
+          title={recipe.frontmatter.title}
+          stars="5.0"
+          description={recipe.frontmatter.description}
+          url={recipe.url}
+        />
+        ))
+      }
+  </div>
+</PageHeaderLayout>

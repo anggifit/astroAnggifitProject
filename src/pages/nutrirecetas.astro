@@ -1,16 +1,20 @@
 ---
 import PageHeaderLayout from "../layouts/PageHeaderLayout.astro";
-import RecipeList from "../components/Nutrirecetas/RecipeList.astro";
+import RecipeFilter from "../components/Nutrirecetas/RecipeFilter.jsx";
+import RecipesTags from "../components/Nutrirecetas/RecipesTags.astro";
 import RecipeCard from "../components/Nutrirecetas/RecipeCard.astro";
 
 const allRecipes = await Astro.glob("../pages/nutrirecetas/*.md");
+
 const pageTitle = "Nutrirecetas";
 const pageSubtitle =
   "Suspendisse non urna sem. Nam aliquet pellentesque egestas. Nunc orci mi, eleifend nec mauris eget, feugiat placerat nunc. Suspendisse potenti. Proin nec dictum elit. Vestibulum scelerisque ligula in ornare pellentesque.";
 ---
 
 <PageHeaderLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle}>
-  <div class="grid grid-cols-4 grid-rows-5 gap-6 mx-2">
+  <RecipeFilter client:load/>
+  <RecipesTags />
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-2 py-6">
     {
       allRecipes.map((recipe) => (
         <RecipeCard

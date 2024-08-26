@@ -1,12 +1,13 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Panqueques de ricotta y limón"
+description: 'Nunc orci mi, eleifend nec mauris eget, feugiat placerat nunc. Suspendisse potenti.'
 author: "Angelyn Bonaldy"
 pubDate: 2024-08-12
 image:
   url: "https://images.unsplash.com/photo-1670842587871-326b95acbc8c?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   alt: "TPanqueques de ricotta y limón"
-tags: ["breakfast", "dessert"]
+tags: ["tag 1", "tag 3"]
 ingredients: [
     "1 taza de harina de avena.",
     "1 cdta. de levadura.",

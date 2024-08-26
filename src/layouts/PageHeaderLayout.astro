@@ -1,21 +1,21 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const { pageTitle, pageSubtitle} = Astro.props;
+const { pageTitle, pageSubtitle } = Astro.props;
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <div class="min-h-[2800px] relative mb-40">
+  <div class="relative">
     <div
-      class="bg-gradient-to-r from-atlantis-300 to-atlantis-100 h-[364px] relative"
+      class="bg-gradient-to-r from-atlantis-300 to-atlantis-100 h-[364px] flex flex-col items-center justify-center"
     >
-      <div class="flex flex-col items-center">
-        <h1 class="text-center pt-28 pb-10">{pageTitle}</h1>
-        <p class="w-[780px] text-center pb-5">
-          {pageSubtitle}
-        </p>
-        <slot />
-      </div>
+      <h1 class="text-center pt-28 pb-10">{pageTitle}</h1>
+      <p class="w-[780px] text-center pb-5">
+        {pageSubtitle}
+      </p>
     </div>
-  </div></BaseLayout
->
+    <div class="relative mt-[-50px] flex flex-col items-center">
+      <slot />
+    </div>
+  </div>
+</BaseLayout>

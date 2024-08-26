@@ -55,7 +55,7 @@ export default {
         },
         h3: {
           fontSize: theme("fontSize.2xl"),
-          fontWeight: "400",
+          fontWeight: "500",
           fontFamily: theme("fontFamily.poppins"),
         },
         p: {
