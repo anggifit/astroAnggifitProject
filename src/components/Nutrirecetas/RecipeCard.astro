@@ -1,5 +1,15 @@
 ---
-const { imageSrc, alt, title, stars, description, url } = Astro.props;
+const {
+  imageSrc,
+  alt,
+  title,
+  stars,
+  description,
+  url,
+  protein,
+  carbs,
+  lipidos,
+} = Astro.props;
 ---
 
 <div
@@ -13,12 +23,12 @@ const { imageSrc, alt, title, stars, description, url } = Astro.props;
       class="absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-[rgba(0,0,0,0.6)]"
     >
     </div>
-    <button
+    <!-- <button
       class="!absolute top-4 right-4 h-8 max-h-[32px] w-8 max-w-[32px] select-none rounded-full text-center align-middle font-sans text-xs font-medium uppercase text-[#EF4444] transition-all hover:bg-[rgba(239,68,68,0.1)] active:bg-[rgba(239,68,68,0.3)] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
       type="button"
       data-ripple-dark="true"
     >
-<!--       <span
+      <span
         class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 transform"
       >
         <svg
@@ -32,8 +42,7 @@ const { imageSrc, alt, title, stars, description, url } = Astro.props;
             d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"
           ></path>
         </svg>
-      </span> -->
-    </button>
+    </button>-->
   </div>
   <div class="p-6">
     <div class="mb-3 flex items-center justify-between">
@@ -65,25 +74,42 @@ const { imageSrc, alt, title, stars, description, url } = Astro.props;
     >
       {description}
     </p>
-    <div class="group mt-8 inline-flex flex-wrap items-center gap-3">
+    <div class="mt-10 inline-flex flex-wrap items-center gap-3 relative">
       <span
-        data-tooltip-target="money"
-        class="cursor-pointer flex items-center justify-center rounded-full border border-atlantis-200 bg-atlantis-100 p-3 text-atlantis-700 transition-colors hover:border-atlantis-300 hover:bg-atlantis-300 hover:!opacity-100 group-hover:opacity-70 w-8 h-8"
+        data-tooltip-target="protein"
+        class="cursor-pointer flex items-center justify-center rounded-full border border-atlantis-200 bg-atlantis-100 p-3 text-atlantis-700 transition-colors hover:border-atlantis-300 hover:bg-atlantis-300 group w-8 h-8 relative"
       >
         P
+        <span
+          class="pointer-events-none absolute -top-7 left-1/2 transform -translate-x-1/2 w-max opacity-0 transition-opacity group-hover:opacity-100"
+        >
+          {protein}
+        </span>
       </span>
       <span
-        data-tooltip-target="money"
-        class="cursor-pointer flex items-center justify-center rounded-full border border-atlantis-200 bg-atlantis-100 p-3 text-atlantis-700 transition-colors hover:border-atlantis-300 hover:bg-atlantis-300 hover:!opacity-100 group-hover:opacity-70 w-8 h-8"
+        data-tooltip-target="hidratos de carbono"
+        class="cursor-pointer flex items-center justify-center rounded-full border border-atlantis-200 bg-atlantis-100 p-3 text-atlantis-700 transition-colors hover:border-atlantis-300 hover:bg-atlantis-300 group w-8 h-8 relative"
       >
         C
+        <span
+          class="pointer-events-none absolute -top-7 left-1/2 transform -translate-x-1/2 w-max opacity-0 transition-opacity group-hover:opacity-100"
+        >
+          {carbs}
+        </span>
       </span>
       <span
-        data-tooltip-target="money"
-        class="cursor-pointer flex items-center justify-center rounded-full border border-atlantis-200 bg-atlantis-100 p-3 text-atlantis-700 transition-colors hover:border-atlantis-300 hover:bg-atlantis-300 hover:!opacity-100 group-hover:opacity-70 w-8 h-8"
+        data-tooltip-target="lipidos"
+        class="cursor-pointer flex items-center justify-center rounded-full border border-atlantis-200 bg-atlantis-100 p-3 text-atlantis-700 transition-colors hover:border-atlantis-300 hover:bg-atlantis-300 group w-8 h-8 relative"
       >
         L
+        <span
+          class="pointer-events-none absolute -top-7 left-1/2 transform -translate-x-1/2 w-max opacity-0 transition-opacity group-hover:opacity-100"
+        >
+          {lipidos}
+        </span>
       </span>
     </div>
   </div>
 </div>
+
+
