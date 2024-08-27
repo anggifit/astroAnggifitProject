@@ -1,10 +1,8 @@
 ---
-import SquareButton from "../components/SquareButton.jsx"
+import SquareButton from "../components/SquareButton.jsx";
 ---
 
-<div
-  class=" bg-gray-800 py-6 flex flex-col justify-center sm:py-12 mt-20"
->
+<div class="bg-gray-800 py-6 flex flex-col justify-center sm:py-12 mt-20">
   <div class="relative py-3 sm:max-w-xl sm:mx-auto">
     <div
       class="absolute inset-0 bg-gradient-to-r from-atlantis-600 to-atlantis-400 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-xl"
@@ -22,48 +20,50 @@ import SquareButton from "../components/SquareButton.jsx"
         </p>
       </div>
 
-      <form>
+      <form id="contact-form">
         <input
-          class="shadow mb-4 appearance-none  rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
+          class="shadow mb-4 appearance-none rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
           type="text"
-          placeholder="Name"
-          name="name"
+          placeholder="Tu nombre"
+          name="user_name"
         />
 
         <input
-          class="shadow mb-4 appearance-none  rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
+          class="shadow mb-4 appearance-none rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
           type="email"
           placeholder="Email"
-          name="email"
+          name="user_email"
         />
-
-        <input
-          class="shadow mb-4 appearance-none  rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
-          type="text"
-          placeholder="Subject"
-          name="_subject"
-        />
-
         <textarea
-          class="shadow mb-4 min-h-0 appearance-none  rounded h-64 w-full py-2 px-3 text-atlantis-700 leading-tight focus:outline-none focus:shadow-outline"
+          class="shadow mb-4 min-h-0 appearance-none rounded h-64 w-full py-2 px-3 text-atlantis-700 leading-tight focus:outline-none focus:shadow-outline"
           type="text"
-          placeholder="Type your message here..."
-          name="message"
+          placeholder="Tu mensaje..."
+          name="user_message"
           style="height: 121px;"></textarea>
 
+        <div
+          class="g-recaptcha"
+          data-sitekey={import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY}
+        >
+        </div>
         <div class="flex justify-between text-black">
           <SquareButton
-          text="Enviar ➤"
-          onClick={}
-          isActive={}
+            text="Enviar ➤"
+            onClick="document.getElementById('contact-form').requestSubmit()"
+            isActive={true}
           />
           <SquareButton
-          text="Resetear"
-          onClick={}
-          isActive={}
+            text="Resetear"
+            onClick="document.getElementById('contact-form').reset()"
+            isActive={true}
           />
         </div>
       </form>
     </div>
   </div>
 </div>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+  import "../scripts/initEmail.js";
+</script>

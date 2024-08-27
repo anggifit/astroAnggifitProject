@@ -13,6 +13,7 @@
     "@astrojs/preact": "^3.5.1",
     "@astrojs/rss": "^4.0.7",
     "@astrojs/tailwind": "^5.1.0",
+    "@emailjs/browser": "^4.4.1",
     "astro": "^4.11.1",
     "astro-icon": "^1.1.1",
     "preact": "^10.23.1",
