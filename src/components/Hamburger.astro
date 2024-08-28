@@ -2,9 +2,9 @@
 import SectionTitle from "../components/SectionTitle.astro";
 ---
 
-<nav class="md:hidden m-4">
+<nav class="md:hidden fixed top-0 left-0 right-0 bg-white z-50 p-5">
   <div>
-    <button id="menu" aria-label="Toggle Menu">
+    <button id="menu" aria-label="Toggle Menu" class="z-50">
       <svg
         class="w-6 h-6 fill-current"
         xmlns="http://www.w3.org/2000/svg"
@@ -32,6 +32,11 @@ import SectionTitle from "../components/SectionTitle.astro";
       <SectionTitle title="Inicio" href="/" />
       <SectionTitle title="Sobre mi" href="/about" />
       <SectionTitle title="Nutrirecetas" href="/nutrirecetas" />
+      <SectionTitle
+        title="Contactame"
+        href="/about/#contactMe"
+        data-scroll-to="contactMe"
+      />
     </div>
   </div>
 </nav>
