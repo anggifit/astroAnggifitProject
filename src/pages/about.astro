@@ -27,25 +27,27 @@ const text4 =
 ---
 
 <PageHeaderLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle}>
-  <section class="pt-5 pb-16">
-    <AboutCard
-      firstImg={aboutSplit}
-      secondImg={aboutEvents}
-      alt="imagen 1"
-      firstTitle={title1}
-      firstText={text1}
-      secondTitle={title2}
-      secondText={text2}
-    />
-    <AboutCard
-      firstImg={aboutTravel}
-      secondImg={aboutDev}
-      alt="imagen 1"
-      firstTitle={title3}
-      firstText={text3}
-      secondTitle={title4}
-      secondText={text4}
-    />
+  <section class="py-8 sm:py-12 lg:py-16 space-y-8 sm:space-y-12 lg:space-y-16">
+    <div class="space-y-8 md:space-y-0">
+      <AboutCard
+        firstImg={aboutSplit}
+        secondImg={aboutEvents}
+        alt="imagen 1"
+        firstTitle={title1}
+        firstText={text1}
+        secondTitle={title2}
+        secondText={text2}
+      />
+      <AboutCard
+        firstImg={aboutTravel}
+        secondImg={aboutDev}
+        alt="imagen 2"
+        firstTitle={title3}
+        firstText={text3}
+        secondTitle={title4}
+        secondText={text4}
+      />
+    </div>
     <ContactMe />
   </section>
 </PageHeaderLayout>

@@ -7,14 +7,16 @@ const { pageTitle, pageSubtitle } = Astro.props;
 <BaseLayout pageTitle={pageTitle}>
   <div class="relative">
     <div
-      class="bg-gradient-to-r from-atlantis-300 to-atlantis-100 h-[364px] flex flex-col items-center justify-center"
+      class="bg-gradient-to-r from-atlantis-300 to-atlantis-100 min-h-[364px] py-16 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8"
     >
-      <h1 class="text-center pt-28 pb-10">{pageTitle}</h1>
-      <p class="w-[780px] text-center pb-5">
+      <h1 class="text-center text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+        {pageTitle}
+      </h1>
+      <p class="max-w-2xl mx-auto text-center text-base sm:text-lg lg:text-xl">
         {pageSubtitle}
       </p>
     </div>
-    <div class="relative mt-[-50px] flex flex-col items-center">
+    <div class="relative mt-[-50px] flex flex-col items-center px-4 sm:px-6 lg:px-8">
       <slot />
     </div>
   </div>
