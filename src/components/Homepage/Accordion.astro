@@ -2,7 +2,9 @@
 const { question, answer } = Astro.props;
 ---
 
-<div class="accordion group relative divide-y divide-atlantis-200 bg-atlantis-100">
+<div
+  class="accordion group relative divide-y divide-atlantis-200 bg-atlantis-100"
+>
   <button
     class="accordion__button flex w-full flex-1 items-center justify-between gap-2 px-3 py-6 text-left font-normal transition hover:text-atlantis-600 sm:px-4"
     type="button"
@@ -10,37 +12,37 @@ const { question, answer } = Astro.props;
     aria-expanded="false"
     aria-controls={`${question} accordion menu content`}
   >
-    {question}
+    <span class="pr-8">{question}</span>
 
-    <!-- use this is not using astro-icon (or another SVG you like) -->
     <svg
-      class="accordion__chevron h-7 w-7 shrink-0 transition-transform"
+      class="accordion__chevron h-7 w-7 shrink-0 transition-transform absolute right-3 sm:right-4"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
       viewBox="0 0 24 24"
-      ><path
+    >
+      <path
         fill="none"
         stroke="currentColor"
         stroke-linecap="round"
         stroke-linejoin="round"
         stroke-width="2"
-        d="m6 9l6 6l6-6"></path></svg
-    >
+        d="m6 9l6 6l6-6"></path>
+    </svg>
   </button>
 
   <div
     id={`${question} accordion menu content`}
     aria-labelledby={`${question} accordion menu button`}
-    class="accordion__content hidden max-h-0 overflow-hidden px-3 transition-all duration-300 ease-in-out sm:px-4"
+    class="accordion__content hidden overflow-hidden px-3 transition-all duration-300 ease-in-out sm:px-4"
   >
-    <p class="prose mb-4 mt-1 max-w-full transition-[height] text-">
-      {answer}
-    </p>
+    <div class="prose py-4 max-w-full max-h-[300px] overflow-y-auto">
+      <p class="text-base leading-relaxed">{answer}</p>
+    </div>
   </div>
 </div>
 
 <script>
-  import '../../scripts/accordionSetup.js'
+  import "../../scripts/accordionSetup.js";
 </script>
