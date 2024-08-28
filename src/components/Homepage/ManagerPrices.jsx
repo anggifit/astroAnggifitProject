@@ -15,9 +15,9 @@ const ManagerPrices = () => {
 
   return (
     <>
-      <div class="flex justify-center mb-8">
+      <div class="flex justify-center flex-col md:flex-row items-center mb-8">
         {data.services.map((service) => (
-          <div class="mx-4" key={service.shortName}>
+          <div class="mx-4 mb-4" key={service.shortName}>
             <SquareButton
               text={service.shortName}
               onClick={() => handleClick(service.shortName)}

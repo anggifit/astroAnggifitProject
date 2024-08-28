@@ -7,7 +7,7 @@ const PriceCard = ({ item, features, typeService }) => {
   `Hola,%20Estoy%20interesado/a%20en%20recibir%20más%20información%20sobre%20el%20plan%20de%20alimentación%20*${typeService}*.%20¿Podrías%20ayudarme?`;
 
   return (
-    <div className="relative w-[21.875rem] mx-auto bg-atlantis-100 rounded-lg shadow-md rounded-tr-[60px] rounded-bl-[60px] pb-16 flex flex-col transition duration-300 ease-in-out hover:bg-atlantis-200 dark:hover:bg-atlantis-800 transform hover:scale-105">
+    <div className="relative w-[21.875rem] mx-auto bg-atlantis-100 rounded-lg shadow-md rounded-tr-[60px] rounded-bl-[60px] pb-16 flex flex-col transition duration-300 ease-in-out hover:bg-atlantis-200 dark:hover:bg-atlantis-800 transform hover:scale-105 mb-6">
       <div className="flex-grow">
         <div className="p-4 flex flex-col items-center justify-center">
           <p className="text-[24px] font-semibold text-center p-4 pb-6">
