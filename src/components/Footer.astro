@@ -2,56 +2,40 @@
 import SectionTitle from "../components/SectionTitle.astro";
 ---
 
-<footer class="bg-[#fff] w-full h-[240px] z-0">
+<footer class="bg-[#fff] w-full py-8 z-0">
   <div class="border-b border-tuatara-100"></div>
 
-  <div class="container px-4 mx-auto flex flex-col items-center">
-    <a href="/" class="my-4">
-      <img
-        src="/AnggiFitLogo-2-2048x712.webp"
-        class="w-[109px] h-[37.82px] object-cover"
-      />
-    </a>
-    <svg
-      width="1000"
-      height="2"
-      viewBox="0 0 1000 2"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      preserveAspectRatio="none"
-    >
-      <path d="M0 1H1000" stroke="#3C3C3C" stroke-opacity="0.29"></path>
-    </svg>
+  <div class="container px-4 mx-auto">
+    <div class="flex flex-col items-center">
+      <a href="/" class="my-4">
+        <img
+          src="/AnggiFitLogo-2-2048x712.webp"
+          alt="AnggiFit Logo"
+          class="w-[109px] h-auto object-contain"
+        />
+      </a>
+      <div class="w-full max-w-4xl my-4 border-t border-tuatara-100"></div>
+    </div>
 
-    <div class="pt-10 pb-2 w-full flex justify-between items-center">
-      <div class="flex flex-wrap -mx-3 lg:-mx-6">
-        <div class="w-full md:w-auto p-2 md:px-3">
-          <SectionTitle title="Inicio" href="/" />
-        </div>
-        <div class="w-full md:w-auto p-2 md:px-3">
-          <SectionTitle title="Sobre mi" href="/about" />
-        </div>
-        <div class="w-full md:w-auto p-2 md:px-3">
-          <SectionTitle title="Nutrirecetas" href="/nutrirecetas" />
-        </div>
-        <div class="w-full md:w-auto p-2 md:px-3">
-          <SectionTitle title="Etiquetas" href="/tags" />
-        </div>
-      </div>
-      <div class="flex items-center space-x-2">
-        <a href="https://www.instagram.com/anggi_fit" target="_blank" class="flex items-center space-x-2">
-          <span>Sigueme por aca</span>
-          
-          <img src="/instagram.png" class="w-[24px] h-[24px] object-cover" />
-        </a>
-      </div>
-      <div>
-        <p style="font-size: 0.8rem; color: #3C3C3C">
-          Copyright © 2024 Created with love by anggiCode
-        </p>
-      </div>
+    <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+      <nav class="flex flex-wrap justify-center md:justify-start -mx-2">
+        <div class="px-2 py-1"><SectionTitle title="Inicio" href="/" /></div>
+        <div class="px-2 py-1"><SectionTitle title="Sobre mi" href="/about" /></div>
+        <div class="px-2 py-1"><SectionTitle title="Nutrirecetas" href="/nutrirecetas" /></div>
+        <div class="px-2 py-1"><SectionTitle title="Etiquetas" href="/tags" /></div>
+      </nav>
+
+      <a href="https://www.instagram.com/anggi_fit" target="_blank" class="flex items-center space-x-2">
+        <span class="text-sm md:text-base">Sigueme por aca</span>
+        <img src="/instagram.png" alt="Instagram" class="w-6 h-6 object-contain" />
+      </a>
+    </div>
+
+    <div class="mt-6 text-center">
+      <p class="text-sm text-tuatara-300">
+        Copyright © {new Date().getFullYear()} Created with love by anggiCode
+      </p>
     </div>
   </div>
 </footer>
-
 
