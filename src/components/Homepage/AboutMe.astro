@@ -11,30 +11,30 @@ const aboutMeText = data.aboutMe.shortDescription;
 ---
 
 <SectionLayout sectionTitle={sectionTitle}>
-  <div class="flex flex-row justify-center mx-10">
-    <div class="w-[1537px] relative">
-      <div class="grid grid-cols-4 grid-rows-5 gap-4 p-2">
-        <div class="col-span-2 row-span-3 place-self-center relative">
+  <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row items-center justify-between p-4">
+      <div class="w-full lg:w-1/2 mb-8 lg:mb-0 flex justify-center lg:justify-start">
+        <div class="relative p-4 inline-block">
           <div
-            class="w-[151.02px] h-[141.1px] absolute -left-10 -bottom-10 bg-atlantis-100 z-0"
+            class="w-1/4 h-1/4 absolute -left-4 -bottom-4 bg-atlantis-100 z-0"
           >
           </div>
-          <!-- Cuadro verde detrás -->
           <CustomImage
             src={poleUrbano}
             alt="Anggi haciendo pole urbano"
-            width="33.813rem"
+            width={500}
+            class="w-full max-w-md lg:max-w-full relative z-10"
           />
         </div>
-        <div class="col-span-2 row-span-3 col-start-3 self-center">
-          <p class="px-6 mr-2 leading-loose">
-            {aboutMeText}
-          </p>
-          <div class="flex justify-end py-4 my-2">
-            <a href="/about">
-              <CustomButton customButton={customButton} />
-            </a>
-          </div>
+      </div>
+      <div class="w-full lg:w-1/2 lg:pl-8">
+        <p class="text-base sm:text-lg mb-6 text-center lg:text-left">
+          {aboutMeText}
+        </p>
+        <div class="flex justify-center lg:justify-start">
+          <a href="/about" class="w-full sm:w-auto flex justify-center">
+            <CustomButton customButton={customButton} />
+          </a>
         </div>
       </div>
     </div>
