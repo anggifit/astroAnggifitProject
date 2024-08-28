@@ -8,24 +8,34 @@ const mensajeWhatsApp = "Hola,%20Estoy%20interesado/a%20en%20recibir%20más%20in
 
 ---
 
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-  <body>
+  <body class="overflow-x-hidden w-full m-0 p-0">
     <Header />
-    <slot />
+    <main class="w-full">
+      <slot />
+    </main>
     <a
       href=`https://wa.me/${whatsapp}?text=${mensajeWhatsApp}`
-      class="fixed w-14 h-14 bottom-10 right-10 text-center font-2xl z-100"
+      class="fixed w-14 h-14 bottom-10 right-10 text-center font-2xl z-50"
       target="_blank"
     >
-      <img src = "/whatsapp-logo-48.png" alt="Enviar mensaje via whatsapp" style="margin-top:16px"></i>
+      <img src="/whatsapp-logo-48.png" alt="Enviar mensaje via whatsapp" class="w-full h-full object-contain">
     </a>
     <Footer />
   </body>
 </html>
+
+<style is:global>
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+</style>
