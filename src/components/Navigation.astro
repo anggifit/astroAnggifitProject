@@ -3,18 +3,25 @@ import SectionTitle from "../components/SectionTitle.astro";
 ---
 
 <nav
-  class="font-sans flex items-center justify-between py-2 px-20 bg-white shadow w-full"
+  class="font-sans items-center justify-between py-2 px-20 bg-white shadow w-full hidden fixed md:flex z-30"
 >
-  <div class="flex items-center">
-    <!--       <StaticImage
-        class="w-28 mr-4"
-        src=""
-        alt="Logo"
-      /> -->
-  </div>
-  <div class="flex items-center">
-    <SectionTitle title="Inicio" href="/" />
-    <SectionTitle title="Sobre mi" href="/about" />
-    <SectionTitle title="Nutrirecetas" href="/nutrirecetas" />
+  <div class="flex items-center w-full">
+    <a href="/">
+      <img
+        src="/AnggiFitLogo-2-2048x712.webp"
+        class="w-[136px] h-[47.27px] object-cover"
+      />
+    </a>
+    <div class="flex items-center ml-auto">
+      <SectionTitle title="Inicio" href="/" />
+      <SectionTitle title="Sobre mi" href="/about" />
+      <SectionTitle title="Nutrirecetas" href="/nutrirecetas" />
+      <SectionTitle
+        title="Contactame"
+        href="/about/#contactMe"
+        data-scroll-to="contactMe"
+      />
+    </div>
   </div>
 </nav>
+

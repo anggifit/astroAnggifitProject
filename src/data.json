@@ -1,0 +1,148 @@
+{
+  "mainTitle": "Título descriptivo aquí",
+  "aboutMe": {
+    "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula purus sed nibh pulvinar, non cursus velit feugiat. ¡Haz click para saber más!",
+    "longDescription1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "longDescription2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  "testimonies": [
+    {
+      "name": "Nombre del Testimonio 1",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, felis a interdum suscipit, nunc libero laoreet nunc, nec tempus metus risus ac dolor."
+    },
+    {
+      "name": "Nombre del Testimonio 2",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent auctor ex vel ex bibendum, vel consequat mauris vestibulum."
+    },
+    {
+      "name": "Nombre del Testimonio 3",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec eros nec sapien congue convallis id a enim."
+    }
+  ],
+  "services": [
+    {
+      "name": "Nombre del Servicio 1",
+      "shortName":"Corto Servicio 1",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Comodidad y flexibilidad desde donde estés.",
+      "plans": [
+        {
+          "name": "Plan Básico",
+          "price": "Precio descriptivo aquí",
+          "features": [
+            "Lorem ipsum dolor sit amet",
+            "Consectetur adipiscing elit",
+            "Sed do eiusmod tempor",
+            "Incididunt ut labore",
+            "Dolore magna aliqua"
+          ]
+        },
+        {
+          "name": "Plan Avanzado",
+          "price": "Precio descriptivo aquí",
+          "features": [
+            "Lorem ipsum dolor sit amet",
+            "Consectetur adipiscing elit",
+            "Sed do eiusmod tempor",
+            "Incididunt ut labore",
+            "Dolore magna aliqua"
+          ]
+        },
+        {
+          "name": "Plan Premium",
+          "price": "Precio descriptivo aquí",
+          "features": [
+            "Lorem ipsum dolor sit amet",
+            "Consectetur adipiscing elit",
+            "Sed do eiusmod tempor",
+            "Incididunt ut labore",
+            "Dolore magna aliqua"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nombre del Servicio 2",
+      "shortName":"Corto Servicio 2",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "plans": [
+        {
+          "name": "Plan 1",
+          "price": "Precio descriptivo aquí",
+          "features": [
+            "Lorem ipsum dolor sit amet",
+            "Consectetur adipiscing elit",
+            "Sed do eiusmod tempor",
+            "Incididunt ut labore",
+            "Dolore magna aliqua"
+          ]
+        },
+        {
+          "name": "Plan 2",
+          "price": "Precio descriptivo aquí",
+          "features": [
+            "Lorem ipsum dolor sit amet",
+            "Consectetur adipiscing elit",
+            "Sed do eiusmod tempor",
+            "Incididunt ut labore",
+            "Dolore magna aliqua"
+          ]
+        },
+        {
+          "name": "Plan 3",
+          "price": "Precio descriptivo aquí",
+          "features": [
+            "Lorem ipsum dolor sit amet",
+            "Consectetur adipiscing elit",
+            "Sed do eiusmod tempor",
+            "Incididunt ut labore",
+            "Dolore magna aliqua"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nombre del Servicio 3",
+      "shortName":"Corto Servicio 3",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "plans": [
+        {
+          "name": "Just trainning",
+          "price": "Precio descriptivo aquí",
+          "features": [
+            "Lorem ipsum dolor sit amet",
+            "Consectetur adipiscing elit",
+            "Sed do eiusmod tempor",
+            "Incididunt ut labore",
+            "Dolore magna aliqua"
+          ]
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Pregunta descriptiva aquí 1",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proceso descriptivo aquí."
+    },
+    {
+      "question": "Pregunta descriptiva aquí 2",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proceso descriptivo aquí."
+    },
+    {
+      "question": "Pregunta descriptiva aquí 3",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proceso descriptivo aquí."
+    },
+    {
+      "question": "Pregunta descriptiva aquí 4",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proceso descriptivo aquí."
+    },
+    {
+      "question": "Pregunta descriptiva aquí 5",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proceso descriptivo aquí."
+    },
+    {
+      "question": "Pregunta descriptiva aquí 6",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proceso descriptivo aquí."
+    }
+  ]
+}

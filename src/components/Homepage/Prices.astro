@@ -1,0 +1,11 @@
+---
+import SectionLayout from "../../layouts/SectionLayout.astro";
+import ManagerPrices from "../Homepage/ManagerPrices.jsx";
+
+const sectionTitle = "Precios y Opciones";
+const subtitle = "Encuentra la mejor opción para alcanzar tus metas de salud";
+---
+
+<SectionLayout sectionTitle={sectionTitle} subtitle={subtitle}>
+  <ManagerPrices client:load />
+</SectionLayout>

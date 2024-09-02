@@ -1,0 +1,23 @@
+---
+import PageHeaderLayout from "../../layouts/PageHeaderLayout.astro";
+
+const allRecipes = await Astro.glob("../nutrirecetas/*.md");
+const tags = [
+  ...new Set(allRecipes.map((recipe) => recipe.frontmatter.tags).flat())
+];
+
+const pageTitle = "Encuentra tu receta";
+const pageSubtitle ="";
+---
+
+<PageHeaderLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle}>
+  <div class="flex flex-wrap">
+    {
+      tags.map((tag) => (
+        <p class="m-1 py-2 px-4">
+          <a class="text-atlantis-700" href={`/tags/${tag}`}>{tag}</a>
+        </p>
+      ))
+    }
+  </div>
+</PageHeaderLayout>

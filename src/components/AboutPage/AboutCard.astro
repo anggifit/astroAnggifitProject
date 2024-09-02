@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets";
+
+const {
+  firstImg,
+  secondImg,
+  alt,
+  firstTitle,
+  firstText,
+  secondTitle,
+  secondText,
+} = Astro.props;
+---
+
+<div class="flex flex-col lg:flex-row w-full max-w-[1280px] mx-auto mb-8">
+  <Image
+    src={firstImg}
+    alt={alt}
+    class="w-full lg:w-1/2 h-[420px] rounded-t-[60px] lg:rounded-tl-[60px] lg:rounded-tr-none shadow-md relative z-20 object-cover border-b-8 lg:border-b-0 lg:border-r-8 border-atlantis-500"
+  />
+  <div
+    class="flex flex-col justify-center items-start self-stretch w-full lg:w-1/2 relative gap-[30px] p-6 sm:p-[60px] bg-white rounded-b-xl lg:rounded-r-xl lg:rounded-l-none"
+  >
+    <div
+      class="flex justify-start items-center w-full relative gap-2.5 py-2 border-t-0 border-r-0 border-b-[3px] border-l-0 border-[#cbea7b]"
+    >
+      <p
+        class="text-xl font-semibold text-left text-[#1a3129]"
+      >
+        {firstTitle}
+      </p>
+    </div>
+    <p class="w-full text-left">
+      {firstText}
+    </p>
+  </div>
+</div>
+
+<div class="flex flex-col lg:flex-row-reverse w-full max-w-[1280px] mx-auto">
+  <Image
+    src={secondImg}
+    alt={alt}
+    class="w-full lg:w-1/2 h-[420px] rounded-t-[60px] lg:rounded-tr-[60px] lg:rounded-tl-none shadow-md relative object-cover border-b-8 lg:border-b-0 lg:border-l-8 border-atlantis-500"
+  />
+  <div
+    class="flex flex-col justify-center items-end self-stretch w-full lg:w-1/2 relative gap-[30px] p-6 sm:p-[60px] bg-white rounded-b-xl lg:rounded-l-xl lg:rounded-r-none"
+  >
+    <div
+      class="flex justify-end items-center w-full relative gap-2.5 py-2 border-t-0 border-r-0 border-b-[3px] border-l-0 border-[#cbea7b]"
+    >
+      <p
+        class="text-xl font-semibold text-right text-[#1a3129]"
+      >
+        {secondTitle}
+      </p>
+    </div>
+    <p class="w-full text-right">
+      {secondText}
+    </p>
+  </div>
+</div>

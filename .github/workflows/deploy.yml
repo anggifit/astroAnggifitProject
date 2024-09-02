@@ -3,11 +3,24 @@
 name: "Deploy to Netlify"
 
 on:
-  push:
+  pull_request:
     branches: [ main ]
+    
+permissions:
+  issues: write
+  contents: read
 
 jobs:
+  approve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: trstringer/manual-approval@v1
+        with:
+          secret: ${{ secrets.GITHUB_TOKEN }}
+          approvers: anggifit
+
   deploy:
+    needs: approve
     name: 'Deploy'
     runs-on: ubuntu-latest
 

@@ -1,0 +1,20 @@
+---
+import SectionLayout from "../../layouts/SectionLayout.astro";
+import Accordion from "../Homepage/Accordion.astro";
+import data from "../../data.json";
+
+const sectionTitle = "Resuelve tus Dudas Aquí";
+const subtitle =
+  "Explora nuestras respuestas a las preguntas más habituales para entender mejor cómo trabajaremos juntos para mejorar tu bienestar.";
+const dataFaq = data.faqs;
+---
+
+<SectionLayout sectionTitle={sectionTitle} subtitle={subtitle}>
+  <div class="mx-auto max-w-[1300px] w-full px-4 sm:px-6 lg:px-8 pb-10">
+    {
+      dataFaq.map((item) => (
+        <Accordion question={item.question} answer={item.answer} />
+      ))
+    }
+  </div>
+</SectionLayout>

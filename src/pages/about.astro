@@ -1,23 +1,53 @@
 ---
-import Navigation from '../components/Navigation.astro'
-import Footer from '../components/Footer.astro'
+import AboutCard from "../components/AboutPage/AboutCard.astro";
+import ContactMe from "../components/ContactMe.astro";
+import PageHeaderLayout from "../layouts/PageHeaderLayout.astro";
+import aboutSplit from "../assets/about-split.jpg";
+import aboutEvents from "../assets/about-events.jpg";
+import aboutTravel from "../assets/about-travel.jpg";
+import aboutDev from "../assets/about-dev.jpeg";
 
 const pageTitle = "Sobre mi";
+const pageSubtitle =
+  "Welcome to Nutritionist, your partner in achieving optimal health through personalized nutrition coaching. Our certified nutritionists are here to guide you on your weight loss journey.";
+
+const title1 = "Un Comienzo con Propósito";
+const title2 = "Titulo 2 Lorem ipsum dolor sit";
+const title3 = "Titulo 3 Lorem ipsum dolor sit";
+const title4 = "Titulo 4 Lorem ipsum dolor sit";
+
+const text1 =
+  "Cras molestie augue congue quam malesuada pulvinar. Maecenas urna magna, venenatis quis sagittis eget, commodo facilisis augue. Cras a neque sit amet sem imperdiet tempus. Donec scelerisque finibus massa, vel faucibus turpis porta dapibus. Praesent ac cursus dui, rutrum iaculis mi. Nam ornare odio ac fermentum elementum. In hac habitasse platea dictumst.";
+const text2 =
+  "Cras molestie augue congue quam malesuada pulvinar. Maecenas urna magna, venenatis quis sagittis eget, commodo facilisis augue. Cras a neque sit amet sem imperdiet tempus. Donec scelerisque finibus massa, vel faucibus turpis porta dapibus. Praesent ac cursus dui, rutrum iaculis mi. Nam ornare odio ac fermentum elementum. In hac habitasse platea dictumst.";
+const text3 =
+  "Cras molestie augue congue quam malesuada pulvinar. Maecenas urna magna, venenatis quis sagittis eget, commodo facilisis augue. Cras a neque sit amet sem imperdiet tempus. Donec scelerisque finibus massa, vel faucibus turpis porta dapibus. Praesent ac cursus dui, rutrum iaculis mi. Nam ornare odio ac fermentum elementum. In hac habitasse platea dictumst.";
+const text4 =
+  "Cras molestie augue congue quam malesuada pulvinar. Maecenas urna magna, venenatis quis sagittis eget, commodo facilisis augue. Cras a neque sit amet sem imperdiet tempus. Donec scelerisque finibus massa, vel faucibus turpis porta dapibus. Praesent ac cursus dui, rutrum iaculis mi. Nam ornare odio ac fermentum elementum. In hac habitasse platea dictumst.";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<Navigation/>
-		
-        <h1>{pageTitle}</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<Footer/>
-	</body>
-</html>
+<PageHeaderLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle}>
+  <section class="py-8 sm:py-12 lg:py-16 space-y-8 sm:space-y-12 lg:space-y-16">
+    <div class="space-y-8 md:space-y-0">
+      <AboutCard
+        firstImg={aboutSplit}
+        secondImg={aboutEvents}
+        alt="imagen 1"
+        firstTitle={title1}
+        firstText={text1}
+        secondTitle={title2}
+        secondText={text2}
+      />
+      <AboutCard
+        firstImg={aboutTravel}
+        secondImg={aboutDev}
+        alt="imagen 2"
+        firstTitle={title3}
+        firstText={text3}
+        secondTitle={title4}
+        secondText={text4}
+      />
+    </div>
+    <ContactMe />
+  </section>
+</PageHeaderLayout>

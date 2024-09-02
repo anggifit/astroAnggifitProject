@@ -2,7 +2,7 @@
 const plugin = require("tailwindcss/plugin");
 
 export default {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
       fontFamily: {
@@ -11,8 +11,8 @@ export default {
     },
     fontSize: {
       sm: "0.8rem",
-      base: "1.125rem", // 18px
-      xl: "1.75rem", // 28px (necesario para otros elementos)
+      base: "1rem", // 16px
+      xl: "1.5rem", //
       "2xl": "1.875rem", // 30px (H3)
       "3xl": "2.375rem", // 38px (H2)
       "4xl": "2.75rem", // 44px (H1)
@@ -32,8 +32,12 @@ export default {
         950: "#172a09",
       },
       tuatara: {
-        200: "#d1d1d1"
-      }
+        100: "#dfe2e6",
+        200: "#d1d1d1",
+        300: "#999999",
+      },
+      black: "#000000",
+      white: "#ffffff",
     },
   },
   plugins: [
@@ -51,7 +55,7 @@ export default {
         },
         h3: {
           fontSize: theme("fontSize.2xl"),
-          fontWeight: "400",
+          fontWeight: "500",
           fontFamily: theme("fontFamily.poppins"),
         },
         p: {
@@ -62,5 +66,4 @@ export default {
       });
     }),
   ],
-}
-
+};

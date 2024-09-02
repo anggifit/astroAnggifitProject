@@ -1,0 +1,26 @@
+---
+import ServiceCard from "../Homepage/Cards/ServiceCard.astro";
+import SectionLayout from "../../layouts/SectionLayout.astro";
+import data from "../../data.json";
+import pic1 from "../../assets/pic1.jpg";
+import pic2 from "../../assets/pic2.jpg";
+import pic3 from "../../assets/pic3.jpg";
+
+const sectionTitle = "Servicios ofrecidos";
+const subtitle = "Explora los Planes y Consultas";
+---
+
+<SectionLayout sectionTitle={sectionTitle}>
+  <div class="max-w-[1089px] mx-auto flex flex-wrap justify-center">
+ 
+    {
+      data.services.map((item, index) => {
+        const images = [pic1, pic2, pic3]
+        const imagesSrc = images[index]
+        return (
+          <ServiceCard src={imagesSrc} alt={item.name} title={item.name} />
+        ) 
+      })
+    }
+  </div>
+</SectionLayout>

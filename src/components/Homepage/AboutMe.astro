@@ -1,0 +1,42 @@
+---
+import SectionLayout from "../../layouts/SectionLayout.astro";
+import CustomImage from "../CustomImage.astro";
+import CustomButton from "../CustomButton.astro";
+import poleUrbano from "../../assets/anggi-pole-urbano.jpeg";
+import data from "../../data.json"
+
+const { sectionTitle } = Astro.props;
+const customButton = "Mas acerca de mi";
+const aboutMeText = data.aboutMe.shortDescription;
+---
+
+<SectionLayout sectionTitle={sectionTitle}>
+  <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row items-center justify-between p-4">
+      <div class="w-full lg:w-1/2 mb-8 lg:mb-0 flex justify-center lg:justify-start">
+        <div class="relative p-4 inline-block">
+          <div
+            class="w-1/4 h-1/4 absolute -left-4 -bottom-4 bg-atlantis-100 z-0"
+          >
+          </div>
+          <CustomImage
+            src={poleUrbano}
+            alt="Anggi haciendo pole urbano"
+            width={500}
+            class="w-full max-w-md lg:max-w-full relative z-10"
+          />
+        </div>
+      </div>
+      <div class="w-full lg:w-1/2 lg:pl-8">
+        <p class="text-base sm:text-lg mb-6 text-center lg:text-left">
+          {aboutMeText}
+        </p>
+        <div class="flex justify-center lg:justify-start">
+          <a href="/about" class="w-full sm:w-auto flex justify-center">
+            <CustomButton customButton={customButton} />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</SectionLayout>

@@ -1,31 +1,33 @@
 ---
-import Navigation from "../components/Navigation.astro";
-import Footer from "../components/Footer.astro";
+import PageHeaderLayout from "../layouts/PageHeaderLayout.astro";
+import RecipeFilter from "../components/Nutrirecetas/RecipeFilter.jsx";
+import RecipesTags from "../components/Nutrirecetas/RecipesTags.astro";
+import RecipeCard from "../components/Nutrirecetas/RecipeCard.astro";
+
+const allRecipes = await Astro.glob("../pages/nutrirecetas/*.md");
 
 const pageTitle = "Nutrirecetas";
+const pageSubtitle =
+  "Suspendisse non urna sem. Nam aliquet pellentesque egestas. Nunc orci mi, eleifend nec mauris eget, feugiat placerat nunc. Suspendisse potenti. Proin nec dictum elit. Vestibulum scelerisque ligula in ornare pellentesque.";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <Navigation />
-
-    <h1>{pageTitle}</h1>
-    <ul>
-      <li><a href="/nutrirecetas/recipe-1/">Tostadas de queso y tomate</a></li>
-      <li><a href="/nutrirecetas/recipe-2/">Torticas de arroz</a></li>
-      <li>
-        <a href="/nutrirecetas/recipe-3/"
-          >Arepa de avena, zapallo o auyama y espinaca</a
-        >
-      </li>
-    </ul>
-    <Footer />
-  </body>
-</html>
+<PageHeaderLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle}>
+  <RecipeFilter client:load/>
+  <RecipesTags />
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-2 py-6">
+    {
+      allRecipes.map((recipe) => (
+        <RecipeCard
+          imageSrc={recipe.frontmatter.image.url}
+          title={recipe.frontmatter.title}
+          stars="5.0"
+          description={recipe.frontmatter.description}
+          url={recipe.url}
+          protein={recipe.frontmatter.protein} 
+          carbs={recipe.frontmatter.carbs}
+          lipidos={recipe.frontmatter.lipidos}
+        />
+      ))
+    }
+  </div>
+</PageHeaderLayout>

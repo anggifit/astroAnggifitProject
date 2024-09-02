@@ -1,0 +1,70 @@
+---
+import SquareButton from "../components/SquareButton.jsx";
+---
+
+<div class="bg-gray-800 py-6 flex flex-col justify-center sm:py-12 mt-20">
+  <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+    <div
+      id="contactMe"
+      class="absolute inset-0 bg-gradient-to-r from-atlantis-600 to-atlantis-400 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-xl"
+    >
+    </div>
+    <div
+      class="text-white relative px-4 py-10 bg-atlantis-400 shadow-lg sm:rounded-xl sm:p-20"
+    >
+      <div class="text-center pb-6">
+        <h2 class="text-3xl">Contactame</h2>
+
+        <p class="text-black">
+          No dudes en escribirme. Estoy lista para ayudarte con lo que
+          necesites.
+        </p>
+      </div>
+
+      <form id="contact-form">
+        <input
+          class="shadow mb-4 appearance-none rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
+          type="text"
+          placeholder="Tu nombre"
+          name="user_name"
+        />
+
+        <input
+          class="shadow mb-4 appearance-none rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
+          type="email"
+          placeholder="Email"
+          name="user_email"
+        />
+        <textarea
+          class="shadow mb-4 min-h-0 appearance-none rounded h-64 w-full py-2 px-3 text-atlantis-700 leading-tight focus:outline-none focus:shadow-outline"
+          type="text"
+          placeholder="Tu mensaje..."
+          name="user_message"
+          style="height: 121px;"></textarea>
+
+        <div
+          class="g-recaptcha"
+          data-sitekey={import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY}
+        >
+        </div>
+        <div class="flex justify-between text-black">
+          <SquareButton
+            text="Enviar ➤"
+            onClick="document.getElementById('contact-form').requestSubmit()"
+            isActive={true}
+          />
+          <SquareButton
+            text="Resetear"
+            onClick="document.getElementById('contact-form').reset()"
+            isActive={true}
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+  import "../scripts/initEmail.js";
+</script>

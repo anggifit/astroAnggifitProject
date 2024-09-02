@@ -1,26 +1,21 @@
 ---
-import Navigation from '../components/Navigation.astro'
-import Footer from '../components/Footer.astro'
+import BaseLayout from "../layouts/BaseLayout.astro";
+import MainHeader from "../components/Homepage/MainHeader.astro";
+import AboutMe from "../components/Homepage/AboutMe.astro";
+import Services from "../components/Homepage/Services.astro";
+import Testimonies from "../components/Homepage/Testimonies.astro";
+import Prices from "../components/Homepage/Prices.astro";
+import Faq from "../components/Homepage/Faq.astro";
 
 const pageTitle = "Inicio";
-const customButton = "Reserva ahora"
-
+const customButton = "Agenda tu Cita";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<Navigation/>
-
-		<h1 class="text-cyan-500" >Equilibrio y bienestar a tu alcance.</h1>
-		<p>Descubre el camino hacia una vida equilibrada y llena de bienestar.</p>
-		<button class="bg-atlantis-400 p-4 m-4 rounded-full">{customButton}</button>
-		<Footer/>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <MainHeader customButton={customButton} />
+  <AboutMe sectionTitle="Sobre mi" />
+  <Services />
+  <Testimonies />
+  <Prices />
+  <Faq /> 
+</BaseLayout>

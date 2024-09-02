@@ -2,33 +2,40 @@
 import SectionTitle from "../components/SectionTitle.astro";
 ---
 
-<footer class="bg-white w-full fixed bottom-0 z-10">
-  <div class="border-b border-tuatara-200"></div>
-  
-  <!-- Contenedor principal del footer -->
+<footer class="bg-[#fff] w-full py-8 z-0">
+  <div class="border-b border-tuatara-100"></div>
+
   <div class="container px-4 mx-auto">
-    <!-- Ajuste de padding para reducir la altura -->
-    <div class="pt-2 pb-2 mx-auto max-w-4xl">
-      <div class="flex flex-wrap justify-center -mx-3 lg:-mx-6">
-        <!-- Secciones del footer con menos padding -->
-        <div class="w-full md:w-auto p-2 md:px-3">
-          <SectionTitle title="Inicio" href="/" />
-        </div>
-        <div class="w-full md:w-auto p-2 md:px-3">
-          <SectionTitle title="Sobre mi" href="/about" />
-        </div>
-        <div class="w-full md:w-auto p-2 md:px-3">
-          <SectionTitle title="Nutrirecetas" href="/nutrirecetas" />
-        </div>
-      </div>
+    <div class="flex flex-col items-center">
+      <a href="/" class="my-4">
+        <img
+          src="/AnggiFitLogo-2-2048x712.webp"
+          alt="AnggiFit Logo"
+          class="w-[109px] h-auto object-contain"
+        />
+      </a>
+      <div class="w-full max-w-4xl my-4 border-t border-tuatara-100"></div>
     </div>
-  </div>
-  
-  <!-- Ajuste de margen y padding del texto de copyright -->
-  <div class="container px-4 mx-auto">
-    <p class="py-5 text-sm text-gray-400 text-center">
-      Copyright © 2024 Created with love by anggifit
-    </p>
+
+    <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+      <nav class="flex flex-wrap justify-center md:justify-start -mx-2">
+        <div class="px-2 py-1"><SectionTitle title="Inicio" href="/" /></div>
+        <div class="px-2 py-1"><SectionTitle title="Sobre mi" href="/about" /></div>
+        <div class="px-2 py-1"><SectionTitle title="Nutrirecetas" href="/nutrirecetas" /></div>
+        <div class="px-2 py-1"><SectionTitle title="Etiquetas" href="/tags" /></div>
+      </nav>
+
+      <a href="https://www.instagram.com/anggi_fit" target="_blank" class="flex items-center space-x-2">
+        <span class="text-sm md:text-base">Sigueme por aca</span>
+        <img src="/instagram.png" alt="Instagram" class="w-6 h-6 object-contain" />
+      </a>
+    </div>
+
+    <div class="mt-6 text-center">
+      <p class="text-sm text-tuatara-300">
+        Copyright © {new Date().getFullYear()} Created with love by anggiCode
+      </p>
+    </div>
   </div>
 </footer>
 
